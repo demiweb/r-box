@@ -1,0 +1,46 @@
+.slider
+  $this: &
+  &__wrap
+    position: relative
+  
+  &--projects
+    &__wrap
+    .slick-list
+      margin-left: -15px
+      margin-right: -15px
+    .slick-slide
+      margin-left: 15px
+      margin-right: 15px
+    .slider
+
+.prev,
+.next
+  position: relative
+  width: 40px
+  height: 40px
+  color: $black-light
+  +inline-flex(center, center)
+  transform: translate(0, -50%)
+  position: absolute
+  top: 50%
+  +before
+    background-color: $accent
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    transform: skew(15deg)
+    position: absolute
+    z-index: 0
+  +after
+    +icon-arrow(10, 10, 1, currentColor, 45)
+
+.prev
+  left: -100px
+
+.next
+  right: -100px
+  +before
+    transform: skew(-15deg)
+  +after
+    +rotate(-135)

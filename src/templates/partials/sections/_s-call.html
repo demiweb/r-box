@@ -1,0 +1,43 @@
+<!-- begin section  -->
+<section class="section s-call section--bg section--white pt-lgl pb-lgl js-lazy" data-background-image="./img/bg-call.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 offset-7">
+        <div class="section__title">
+          <div class="title title--h2 title--white title-under">Оставьте ваш контактный телефон и мы перезвоним вам</div>
+        </div>
+
+        <div class="section__subttl text--gray">При заказе от 10 000 грн выезд мастера <br> и замеры площади проводятся бесплатно</div>
+
+        <div class="section__form">
+          <!-- begin form -->
+          <div class="form form--call">
+            <form>
+              <div class="form__field">
+                {{ mixins.input(
+                  name = 'input',
+                  type = 'tel',
+                  fieldClass = 'js-mask',
+                  fieldAttributes = { 'data-mask': 'phone' },
+                  placeholder = '+3 ( _ _ _ ) _ _ _ - _ _ - _ _',
+                  label = { first:  mixins.icon('smartphone') }
+                ) }}
+              </div>
+              <div class="form__btn">
+                {{ mixins.btn(
+                  title = '<span>Заказать звонок</span>',
+                  mod = 'btn--full',
+                  href = false
+                ) }}
+              </div>
+            </form>
+
+            <div class="form__bottom"><em class="it-bold">Первым 100 позвонившим</em> — гарантированная скидка <strong class="accent">10%</strong></div>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section  -->

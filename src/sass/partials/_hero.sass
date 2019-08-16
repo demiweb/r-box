@@ -1,0 +1,60 @@
+.hero
+  +cover
+  position: relative
+  color: $white
+  z-index: 2
+  margin-bottom: 40px
+  .container
+    position: relative
+    z-index: 1
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 0
+    +cover
+    overflow: hidden
+    video
+      min-width: 100%
+      min-height: 100%
+  &__content
+    padding-top: 20%
+    padding-bottom: 25%
+  &__title
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__nav
+    margin-bottom: 20px
+    max-width: 400px
+    +md
+      margin-bottom: 10px
+  &__btn
+    margin-bottom: 15px
+    +md 
+      margin-bottom: 10px
+  &__guar
+    font-size: $fz-sm
+    +os-reg
+    position: relative
+    padding-left: 40px
+    .icon
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      left: 0
+      font-size: 35px
+  &__img
+    position: relative
+    +flex(flex-start, flex-end)
+    img
+      position: relative
+      top: 40px
+  &__scroll
+    position: absolute
+    z-index: 2
+    left: 50%
+    transform: translate(-50%, 0)
+    bottom: 25px

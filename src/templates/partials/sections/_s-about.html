@@ -1,0 +1,81 @@
+{%set
+  items = [
+    {
+      img: '01.png',
+      title: { title: 'Как доставляем', mod: '' },
+      text: 'Доставляем на точку сбора по всему Киеву, собираем и устанавливаем на месте',
+      bg: '#e9f1f4',
+      color: '#a0b1b7'
+    },
+    {
+      img: '02.png',
+      title: { title: 'Какие гарантии', mod: 'title-under--inherit' },
+      text: 'Доставляем на точку сбора по всему Киеву, собираем и устанавливаем на месте',
+      bg: '#ffc600',
+      color: '#9d7c07'
+    },
+    {
+      img: '03.png',
+      title: { title: 'Как принимаем оплату', mod: 'title--white' },
+      text: 'Доставляем на точку сбора по всему Киеву, собираем и устанавливаем на месте',
+      
+      bg: '#262626',
+      color: '#939393'
+    }
+  ]
+%}
+
+<!-- begin section -->
+<section class="section s-about overflow-hidden pt-lgl pb-lgl js-lazy" data-background-image="./img/dude.png">
+  <div class="word">
+    <div class="word__inner">about</div>
+  </div>
+
+  <div class="container">
+    <!-- begin about -->
+    <div class="about">
+      <div class="row">
+        <div class="col-6">
+          <div class="about__content">
+            <div class="section__title">
+              <div class="title title--h2 title-under">Расскажем немного о себе</div>
+            </div>
+
+            <div class="section__subtll">
+            Мы занимаемся производством и <br>
+установкой наружной рекламы. Делаем <br>
+это качественно, поэтому к нам всегда <br>
+возвращаются.
+          </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="about__items">
+            <!-- begin about-items -->
+            <div class="about-items">
+              {% for i in items %}
+                <!-- begin about-item -->
+              <div class="about-item__wrap">
+                <div class="about-item js-lazy" data-background-image="./img/about/{{ i.img }}" style="background-color: {{ i.bg }}">
+                  <div class="about-item__content">
+                    <div class="about-item__title">
+                      <div class="title title--h4 title-under title-under--sm{% if i.title.mod %} {{ i.title.mod }}{% endif %}">{{ i.title.title | safe }}</div>
+                    </div>
+
+                    <div class="about-item__text" style="color: {{ i.color }}">{{ i.text }}</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end about-item -->
+              {% endfor %}
+            </div>
+            <!-- end about-items -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end about -->
+  </div>
+</section>
+<!-- end section -->

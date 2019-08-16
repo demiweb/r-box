@@ -1,0 +1,27 @@
+.btn
+  display: inline-block
+  // background-color: $accent
+  text-align: center
+  +bold
+  font-size: 15px
+  color: $black-light
+  min-width: 275px
+  padding: 1em
+  position: relative
+  +before
+    position: absolute
+    z-index: 0
+    background-color: $accent
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    transform: skew(-15deg)
+  span
+    position: relative
+    z-index: 1
+
+
+  &--full
+    width: 100%
+    min-width: 0

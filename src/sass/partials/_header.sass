@@ -1,0 +1,64 @@
+.header
+  $this: &
+  color: $black-light
+  &__top
+    background-color: $white-dark
+    #{$this}__inner
+      justify-content: space-between
+      // padding-top: 10px
+      // padding-bottom: 10px
+  &__bottom
+    background-color: $accent
+  &__inner
+    +flex(flex-start, center)
+    padding-top: 10px
+    padding-bottom: 10px
+  &__adress
+    +os-reg
+  &__social
+    font-size: $fz-sm
+    color: $gray
+    +flex(flex-start, center)
+  &__social-block
+    +flex(space-around, center)
+    flex-grow: 1
+  &__mail
+    +os-reg
+    .icon
+      margin-right: 5px
+      font-size: 24px
+      position: relative
+      top: 0.2em
+  &__call
+    +os-reg
+    +flex(flex-start, flex-end, column)
+    margin-left: 50px
+    .icon
+      font-size: 24px
+      margin-right: 5px
+      position: relative
+      top: 0.2em
+    button
+      color: #9d7a00
+      text-decoration: underline
+      font-size: $fz-sm
+      +light
+  &__nav
+    flex-grow: 1
+    text-align: right
+
+.lang
+  text-transform: uppercase
+  font-size: $fz-sm
+  li
+    display: inline-block
+    +notlast
+      margin-left: 10px
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+      text-decoration: underline
+    &.is-active
+      color: $accent
+      text-decoration: underline

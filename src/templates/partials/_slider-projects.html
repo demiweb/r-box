@@ -1,0 +1,76 @@
+{%set
+  slider = {
+    slides: [
+      {
+        img: '01_03.jpg',
+        title: 'Лайтбокс для автомобильно 
+сервиса «Шина»',
+        subttl: 'Июнь 2018'
+      },
+      {
+        img: '01_05.jpg',
+        title: 'Рекламный щит для реп-исполнителя
+«Noize MC»',
+        subttl: 'Август 2018'
+      },
+      {
+        img: '01_07.jpg',
+        title: 'Вывеска для кофе-шопа
+«Expresso Room»',
+        subttl: 'Июнь 2018'
+      },
+      {
+        img: '01_09.jpg',
+        title: 'Вывеска для магазина 
+техники «Цитрус»',
+        subttl: 'Август 2019'
+      },
+      {
+        img: '01_03.jpg',
+        title: 'Лайтбокс для автомобильно 
+сервиса «Шина»',
+        subttl: 'Июнь 2018'
+      },
+      {
+        img: '01_05.jpg',
+        title: 'Рекламный щит для реп-исполнителя
+«Noize MC»',
+        subttl: 'Август 2018'
+      },
+      {
+        img: '01_07.jpg',
+        title: 'Вывеска для кофе-шопа
+«Expresso Room»',
+        subttl: 'Июнь 2018'
+      },
+      {
+        img: '01_09.jpg',
+        title: 'Вывеска для магазина 
+техники «Цитрус»',
+        subttl: 'Август 2019'
+      }
+    ]
+  }
+%}
+
+<!-- begin slider -->
+<div class="slider__wrap slider--projects__wrap">
+  <div class="slider slider--projects js-slider" data-slider="projects">
+    {% for i in slider.slides %}
+      <!-- begin slide -->
+      <div class="slide">
+        <!-- begin project-link -->
+        <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/{{ i.img }}">
+          <span class="project-link__title">{{ i.title | safe  }}</span>
+          <span class="project-link__subttl">{{ i.subttl | safe }}</span>
+        </a>
+        <!-- end project-link -->
+      </div>
+      <!-- end slide -->
+    {% endfor %}
+  </div>
+
+  <button class="slider__prev prev js-prev"></button>
+  <button class="slider__next next js-next"></button>
+</div>
+<!-- end slider -->

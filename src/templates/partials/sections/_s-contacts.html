@@ -1,0 +1,108 @@
+{%set
+  contacts = [
+    {
+      icon: 'smartphone',
+      content: '<p>(093) 55-00-898</p><p>(050) 14-33-805</p>'
+    },
+    {
+      icon: 'mail',
+      content: '<a href="mailto:r.box.reklama@gmail.com">r.box.reklama@gmail.com</a>'
+    },
+    {
+      icon: 'placeholder',
+      content: 'Киев, ул. Дмитриевская, 82'
+    },
+    {
+      icon: 'comment',
+      content: 'Напишите нам:'
+    }
+  ]
+%} 
+
+<!-- begin section -->
+<section class="section s-contacts pb-md pt-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-5">
+        <!-- begin scroll-text -->
+        <div class="scroll-text">
+          <article>
+            <h1>Какая реклама самая востребованная на рынке?</h1>
+            <p>Если определять чемпиона среди <strong>световых вывесок,</strong> то им наверняка окажется <em>лайтбокс</em>, как самый востребованный тип <a href="#">наружной рекламы.</a> Компания Март Груп, еше в далеком 2004 году, в начале своей деятельности, освоила разработку и производство данного вида визуальных вывесок. Популярность лайтбоксов у разных заказчиков определяется органичной возможностью совмещения не очень большой по размерам вывески, с ее хорошей световой подачей:</p>
+            <ul>
+              <li>Стоимость</li>
+              <li>Время работ</li>
+              <li>Качество</li>
+            </ul>
+          </article>
+
+          {% for i in range(0 , 5) %}
+            <article>
+              <h2>Из чего делают лайтбоксы?</h2>
+
+              <ol>
+                <li>По конструкции лайтбоксы обычно представляют собой прямоугольный короб на раме, лицевая часть которого является носителем рекламного сообщения. </li>
+                <li>В темное время суток, изнутри этот короб подсвечивается люминесцентными  лампами либо светодиодными модулями. </li>
+                <li>Еще один секрет популярности лайтбаксов - это сравнительно небольшая цена, при не самой высокой сложности изготовления. В  соответствии с их стоимостью производство лайтбоксов можно условно разделить на три их вида.</li>
+              </ol>
+            </article>
+          {% endfor %}
+        </div>
+        <!-- end scroll-text -->
+      </div>
+
+      <div class="col-6 offset-1">
+        <div class="section__title">
+          <div class="title tile--h2 title-under">Свяжитесь с нами удобным <br> для вас способом</div>
+        </div>
+
+        <div class="section__subttl">
+          <p>Мы работаем с 10:00 до 19:00 (Пн-Пт).</p>
+          <p>Звоните, пишите или заезжайте в гости!</p>
+        </div>
+
+        <div class="section__contacts">
+          <!-- begin contacts -->
+          <div class="contacts">
+            <div class="contacts__content">
+              {% for i in contacts %}
+                <div class="contact">
+                  <div class="contact__icon">{{ mixins.icon(i.icon) }}</div>
+
+                  <div class="contact__content">{{ i.content | safe }}</div>
+                </div>
+              {% endfor %}
+
+              <div class="contacts__social">
+                {{ mixins.list(
+                  name = 'social',
+                  modifications = { wrap: '', item: '', link: '' },
+                  list = [
+                    { item: '', link: mixins.icon('viber-square'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('whatsapp'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('messenger'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('telegram'), modItem: '', modLink: '' }
+                  ]
+                ) }}
+              </div>
+            </div>
+
+            <div class="contacts__map">
+              <iframe class="js-lazy" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.1138510972387!2d30.48669926431658!3d50.4554843949553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce62fb6780c9%3A0xc793feaf59f184df!2z0YPQuy4g0JTQvNC40YLRgNC40LXQstGB0LrQsNGPLCA4Miwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1565965058724!5m2!1sru!2sua" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="contacts__btn">
+              {{ mixins.btn(
+                title = '<span>Заказать звонок</span>',
+                mod = '',
+                href = false
+              ) }}
+            </div>
+          </div>
+          <!-- end contacts -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

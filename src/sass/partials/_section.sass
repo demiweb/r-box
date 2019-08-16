@@ -1,0 +1,45 @@
+.section
+  $this: &
+  position: relative
+  .word
+    left: percentage(3/12)
+    top: 0
+  &__title
+    position: relative
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__top
+    +flex(space-between,center)
+    margin-bottom: 40px
+    +md
+      margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
+    #{$this}__title
+      margin-bottom: 0
+  &__subttl
+    margin-bottom: 35px
+    +md
+      margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
+  &__items
+    margin-top: 30px
+    margin-bottom: 30px
+
+  &--white
+    color: $white
+  &--bg
+    +cover
+
+.s-about
+  background-size: 25%
+  background-position: 50% 100%
+  background-repeat: no-repeat
+  .word
+    +css-lock(30, 100, 320, 1499, top)
+
+
+
+

@@ -1,0 +1,52 @@
+strong
+  font-weight: 400
+  +bold
+
+small
+  font-size: inherit
+
+em, i
+  font-style: normal
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
+
+.title
+  +os-reg
+  display: block
+  font-size: 40px
+  line-height: 1
+  color: $black-light
+  &--h2
+    font-size: 35px
+  &--h4
+    font-size: 21px
+  &--h-bold
+    +bold
+  
+  &--white
+    color: $white
+
+.title-under
+  position: relative
+  padding-bottom: 0.4em
+  +before
+    width: 270px
+    background-color: $accent
+    height: 5px
+    bottom: 0
+    left: 1em
+    transform: skew(-70deg)
+    position: absolute
+  &--sm
+    +before
+      width: 65px
+      left: 0
+      transform: skew(-30deg)
+  &--inherit
+    +before
+      background-color: currentColor
+
+.text
+  &--gray
+    color: $gray

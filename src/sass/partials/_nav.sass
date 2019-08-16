@@ -1,0 +1,37 @@
+.nav
+  +os-bold
+  li
+    display: inline-block
+    margin-right: 60px
+  a
+    &.is-active
+      color: $white
+    +hover
+      color: $white
+
+.nav-hero
+  ul
+    +flex(flex-start, normal, row, wrap)
+  li
+    margin-bottom: 15px
+    width: 50%
+    +md
+      margin-bottom: 10px
+    +sm
+      margin-bottom: 5px
+    &::before
+      content: '-'
+      display: inline-block
+      // vertical-align: middle
+      margin-right: 5px
+  a
+    text-decoration: underline
+    +tr(color .3s)
+    +hover
+      text-decoration: none
+      color: $accent
+    &.is-active
+      text-decoration: none
+      color: $accent
+
+  

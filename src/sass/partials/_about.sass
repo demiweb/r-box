@@ -1,0 +1,37 @@
+.about
+  &__content
+    padding-top: 90px
+
+.about-items
+  +clr
+
+.about-item
+  background-repeat: no-repeat
+  background-position: 100% 100%
+  padding-top: 100%
+  position: relative
+  &__wrap
+    width: 50%
+    padding-left: 15px
+    padding-right: 15px
+    float: left   
+    &:nth-child(1)
+      margin-bottom: 30px
+      .about-item
+        // background-color: $white-dark
+    &:nth-child(2)
+      float: right
+      .about-item
+        // background-color: $accent
+        padding-top: calc(200% + 30px)
+    &:nth-child(3)
+      .about-item
+        // background-color: $black-light
+  &__content
+    position: absolute
+    top: 40px
+    left: 20px
+  &__title
+    margin-bottom: 15px
+  &__text
+    max-width: 230px

@@ -1,10 +1,11 @@
+import $ from 'jquery';
 import slick from 'slick-carousel';
-import setLazy from '../components/setLazy';
+import setLazy from './setLazy';
 
 export default function setSliders() {
   const $sliders = $('.js-slider');
 
-  if(!$sliders.length) return;
+  if (!$sliders.length) return;
 
   $sliders.each((i, slider) => {
     const name = slider.dataset.slider;
@@ -15,8 +16,8 @@ export default function setSliders() {
       projects: {
         prevArrow: $prev,
         nextArrow: $next,
-        slidesToShow: 4
-      }
+        slidesToShow: 4,
+      },
     };
 
     $(slider).on('init', () => {

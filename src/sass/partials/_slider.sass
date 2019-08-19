@@ -32,8 +32,12 @@
     transform: skew(15deg)
     position: absolute
     z-index: 0
+    +tr(transform .3s)
   +after
     +icon-arrow(10, 10, 1, currentColor, 45)
+  +hover
+    +before
+      transform: skew(-15deg)
 
 .prev
   left: -100px
@@ -42,5 +46,8 @@
   right: -100px
   +before
     transform: skew(-15deg)
+  +hover
+    +before
+      transform: skew(15deg)
   +after
     +rotate(-135)

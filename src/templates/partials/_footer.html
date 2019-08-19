@@ -1,0 +1,107 @@
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="row">
+        <div class="col-3">
+          <div class="footer__logo">
+            {{ mixins.logo('logo--footer') }}
+          </div>
+          <div class="footer__copy">
+            &copy; 2019. Создаем наружную рекламу в Киеве
+            Вывески, лайтбоксы, штендеры,<br>
+            объемные буквы, таблички
+          </div>
+        </div>
+
+        <div class="col-2">
+          <div class="footer__block">
+            <div class="footer__title">
+              <div class="title title--h4">Клиенту</div>
+            </div>
+
+            <div class="footer__list">
+              {{ mixins.list(
+                name = 'nav',
+                modifications = { wrap: 'nav--footer', item: '', link: '' },
+                list = [
+                  { link: 'Главная' },
+                  { link: 'Услуги' },
+                  { link: 'Продукция' },
+                  { link: 'Блог' }
+                ]
+              ) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="footer__title">
+            <div class="title title--h4">Свяжитесь с нами</div>
+          </div>
+
+          <div class="footer__list">
+            {{ mixins.list(
+              name = '',
+              modifications = { wrap: 'nav nav--footer', item: '', link: '' },
+              list = [
+                { item: 'Адрес: г. Киев, ул. Бассейная, 25' },
+                { item: 'Email: <a href="mailto:rbox.ua@gmail.com">rbox.ua@gmail.com</a>' },
+                { item: 'Телефон: <a href="tel:+380672251215"><em>+38 (067) 225-12-15</em></a>', modItem: '' },
+                { item: 'График работы: 9:00 - 17:00' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="footer__block">
+            <div class="footer__title">
+              <div class="title title--h4">Подпишитесь на наш блог</div>
+            </div>
+
+            <div class="footer__form">
+              <!-- begin form -->
+              <div class="form form--subscribe">
+                <form>
+                  <div class="form__field">
+                    {{ mixins.input(
+                      name = 'input',
+                      type = 'email',
+                      mod = 'input--reg',
+                      placeholder = 'Введите ваш Email'
+                    ) }}
+                    {{ mixins.btn(
+                      title = '',
+                      mod = 'btn--arr',
+                      href = false
+                    ) }}
+                  </div>
+                </form>
+              </div>
+              <!-- end form -->
+            </div>
+
+            <div class="footer__social">
+              {{ mixins.list(
+                name = 'social',
+                modifications = { wrap: '', item: '', link: '' },
+                list = [
+                  { link: mixins.icon('facebook-circle') },
+                  { link: mixins.icon('instagram-circle') }
+                ]
+              ) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="footer__auth">
+            Разработка сайта: <a href="#">Demiweb International</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

@@ -1,4 +1,5 @@
 .btn
+  $this: &
   display: inline-block
   // background-color: $accent
   text-align: center
@@ -17,6 +18,10 @@
     bottom: 0
     right: 0
     transform: skew(-15deg)
+    +tr(transform .3s)
+  +hover
+    +before
+      transform: skew(15deg)
   span
     position: relative
     z-index: 1
@@ -25,3 +30,27 @@
   &--full
     width: 100%
     min-width: 0
+  &--arr
+    background-color: $accent
+    color: $white
+    width: 32px
+    height: 32px
+    min-width: 0
+    +before
+      height: 1px
+      width: 20px
+      background-color: currentColor
+      top: 50%
+      transform: translate(-50%, -50%)
+      bottom: auto
+      right: auto
+      left: 50%
+    +after
+      +icon-arrow(10, 10, 1, currentColor, 225)
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%) rotate(225deg)
+      right: .4em
+    +hover
+      +before
+        transform: translate(-50%, -50%)

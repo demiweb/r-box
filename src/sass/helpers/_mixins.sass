@@ -231,3 +231,16 @@
   display: inline-flex
   justify-content: $justify-content
   align-items: $align-items
+
+=scrollbar($background: $white)
+  &::-webkit-scrollbar
+    width: 6px
+  &::-webkit-scrollbar-track
+    background-color: $black
+    box-shadow: inset 2px 0 0px $background, inset -2px 0 0px $background
+    outline: none
+  &::-webkit-scrollbar-thumb
+    background-color: $accent
+    +tr(background-color .3s)
+    +hover
+      background-color: $gray

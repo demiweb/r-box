@@ -7,7 +7,7 @@
 
         <div class="header__social-block">
           <div class="header__social">
-            Мы в соцсетях:
+            <span>Мы в соцсетях:</span>
             {{ mixins.list(
               name = 'social',
               modifications = { wrap: '', item: '', link: '' },
@@ -19,7 +19,7 @@
           </div>
 
           <div class="header__social">
-            Напишите нам:
+            <span>Напишите нам:</span>
             {{ mixins.list(
               name = 'social',
               modifications = { wrap: '', item: '', link: '' },
@@ -52,12 +52,49 @@
     <div class="container">
       <div class="header__inner">
         <div class="header__logo">
-          {% include "partials/_logo.html" %}
+          {# {% include "partials/_logo.html" %} #}
+          {{ mixins.logo() }}
         </div>
       
 
-        <div class="header__nav">
-          {% include "partials/_nav.html" %}
+        <div class="header__nav js-menu">
+          <div class="header__nav-in">
+            {% include "partials/_nav.html" %}
+          
+            <div class="header__social-block-mob">
+              <div class="header__social">
+                <span>Мы в соцсетях:</span>
+                {{ mixins.list(
+                  name = 'social',
+                  modifications = { wrap: '', item: '', link: '' },
+                  list = [
+                    { item: '', link: mixins.icon('facebook-circle')  , modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('instagram-circle')  , modItem: '', modLink: '' }
+                  ]
+                ) }}
+              </div>
+
+              <div class="header__social">
+                <span>Напишите нам:</span>
+                {{ mixins.list(
+                  name = 'social',
+                  modifications = { wrap: '', item: '', link: '' },
+                  list = [
+                    { item: '', link: mixins.icon('viber-square'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('whatsapp'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('messenger'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('telegram'), modItem: '', modLink: '' }
+                  ]
+                ) }}
+              </div>
+            </div>
+
+            <div class="header__mail-mob">
+              <a href="mailto:r.box.reklama@gmail.com">{{ mixins.icon('mail') }} r.box.reklama@gmail.com</a>
+            </div>
+          </div>
+
+          <button class="header__close js-burger-close"></button>
         </div>
 
         <div class="header__mail">
@@ -65,8 +102,14 @@
         </div>
 
         <div class="header__call">
-          <a href="tel:0501433805">{{ mixins.icon('smartphone') }} (050) 14-33-805</a>
-          <button>Перезвоните мне</button>
+          <button class="header-call">
+            <strong>{{ mixins.icon('smartphone') }} (050) 14-33-805</strong>
+            <span>Перезвоните мне</span>
+          </button>
+        </div>
+
+        <div class="header__burger">
+          <button class="burger js-burger"><span></span></button>
         </div>
       </div>
     </div>

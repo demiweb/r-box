@@ -16,9 +16,16 @@
     z-index: 0
     +cover
     overflow: hidden
+    +before
+      +coverdiv
+      z-index: 1
+      background-color: rgba($black, .7)
     video
-      min-width: 100%
-      min-height: 100%
+      position: relative
+      z-index: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
   &__content
     padding-top: 20%
     padding-bottom: 25%

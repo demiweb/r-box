@@ -13,15 +13,31 @@
     +flex(flex-start, center)
     padding-top: 10px
     padding-bottom: 10px
+    +xs
+      justify-content: space-between
+      padding-top: 5px
+      padding-bottom: 5px
   &__adress
     +os-reg
   &__social
     font-size: $fz-sm
     color: $gray
     +flex(flex-start, center)
+    +sm
+      color: $black-light
+      justify-content: center
+      margin-bottom: 15px
+      span:first-child
+        display: none
   &__social-block
     +flex(space-around, center)
     flex-grow: 1
+    +sm
+      display: none
+  &__social-block-mob
+    display: none
+    +sm
+      display: block
   &__mail
     +os-reg
     .icon
@@ -29,30 +45,85 @@
       font-size: 24px
       position: relative
       top: 0.2em
+    +lg
+      flex-grow: 1
+      text-align: right
+    +xs
+      display: none
+  &__mail-mob
+    display: none
+    +xs
+      display: block
   &__call
-    +os-reg
-    +flex(flex-start, flex-end, column)
     margin-left: 50px
-    .icon
-      font-size: 24px
-      margin-right: 5px
-      position: relative
-      top: 0.2em
-    button
-      color: #9d7a00
-      text-decoration: underline
-      font-size: $fz-sm
-      +light
+    +xs
+      margin-left: 0
   &__nav
     flex-grow: 1
     text-align: right
+    +lg
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 10
+      background-color: $accent
+      text-align: left
+      padding: 15px
+      overflow: auto
+      +vertical
+      transform: translate(0, -100%)
+      +tr(transform .3s)
+      &.is-active
+        transform: translate(0, 0)
+  &__nav-in
+    +lg
+      display: inline-block
+      vertical-align: middle
+      font-size: $fz
+      +sm
+        font-size: $fz-sm
+  &__burger
+    display: none
+    margin-left: 15px
+    +lg
+      display: block
+  &__close
+    +icon-close(30, 1, currentColor)
+    display: none
+    position: absolute
+    top: 15px
+    right: 15px
+    z-index: 1
+    +lg
+      display: block
+
+.header-call
+  +os-reg
+  +flex(flex-start, flex-end, column)  
+  .icon
+    font-size: 24px
+    margin-right: 5px
+    position: relative
+    top: 0.2em
+    +xs
+      font-size: 18px
+  span
+    color: #9d7a00
+    text-decoration: underline
+    font-size: $fz-sm
+    +light
+    +xs
+      display: none
+  
 
 .lang
   text-transform: uppercase
   font-size: $fz-sm
   li
     display: inline-block
-    +notlast
+    +notfirst
       margin-left: 10px
   a
     +tr(color .3s)
@@ -62,3 +133,33 @@
     &.is-active
       color: $accent
       text-decoration: underline
+
+.burger
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: -1.3em
+  // color: $white
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+  span:after
+    top: 18px
+  span 
+    position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: currentColor
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  // &.is-active span 
+  //   background-color: transparent
+  // &.is-active span:before 
+  //   transform: rotate(45deg) translate(-1px, 0px)
+  // &.is-active span:after 
+  //   transform: rotate(-45deg) translate(6px, -7px)

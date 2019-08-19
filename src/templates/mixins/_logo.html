@@ -1,0 +1,11 @@
+{% macro logo(mod) %}
+<!-- begin logo -->
+<a href="/" class="logo{% if mod %} {{ mod }}{% endif %}">
+  <span class="logo__circle"></span>
+  <span class="logo__content">
+    <span class="logo__title">R.Box</span>
+    <span class="logo__subttl">Наружная реклама в Киеве</span>
+  </span>
+</a>
+<!-- end logo -->
+{% endmacro %}

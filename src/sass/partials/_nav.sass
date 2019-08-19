@@ -3,11 +3,35 @@
   li
     display: inline-block
     margin-right: 60px
+    +xl
+      margin-right: 30px
+    +lg
+      margin-right: 0
+      display: block
+      margin-bottom: 15px
   a
+    +tr(color .3s)
     &.is-active
       color: $white
     +hover
       color: $white
+    em
+      +os-reg
+  
+  &--footer
+    +light
+    li
+      display: block
+      margin-right: 0
+      +notlast
+        margin-bottom: 10px
+        +md
+          margin-bottom: 5px
+    a
+      +hover
+        color: $black-light
+      em
+        color: $black-light
 
 .nav-hero
   ul
@@ -33,5 +57,6 @@
     &.is-active
       text-decoration: none
       color: $accent
+
 
   

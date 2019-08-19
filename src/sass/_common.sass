@@ -6,14 +6,17 @@ body
   +light
   color: $c-text
   +no-scroll
+  +sm
+    font-size: $fz-sm
 
 .icon
   display: inline-block
   fill: currentColor
   font-size: inherit
 
-[data-loaded="true"]
-  animation: fadeIn 1s
+.lazy
+  &.is-loaded
+    animation: fadeIn 1s
 
 .container
   max-width: 1440px
@@ -22,14 +25,8 @@ body
   margin-left: auto
   margin: auto
 
-.accent
-  color: $accent !important
-.overflow-hidden
-  overflow: hidden
-.it-bold
-  +os-bold
-
 .logo
+  $this: &
   display: inline-flex
   justify-content: flex-start
   padding-left: 1.15em
@@ -38,6 +35,12 @@ body
   color: $black-light
   font-size: 35px
   +os-reg
+  +lg
+    font-size: 30px
+  +md
+    font-size: 26px
+  +xs
+    font-size: 18px
   &__circle
     height: 2.1em
     width: 2.1em
@@ -59,6 +62,11 @@ body
     display: block
     position: relative
     z-index: 1
+  &--footer
+    #{$this}__content
+      background-color: $white-dark
+    #{$this}__circle
+      border-color: $accent
 
 .scroll-down
   color: $gray
@@ -191,6 +199,8 @@ body
   max-height: 500px
   padding-right: 40px
   font-size: $fz-sm
+  position: relative
+  +scrollbar
   h1, h2, ul, article
     margin-bottom: 30px
     +md
@@ -211,4 +221,3 @@ body
   a
     text-decoration: underline
     color: $blue
-

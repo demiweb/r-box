@@ -25,6 +25,10 @@
   span
     position: relative
     z-index: 1
+  +xs
+    min-width: 0
+    width: 100%
+    font-size: $fz-sm
 
 
   &--full
@@ -54,3 +58,5 @@
     +hover
       +before
         transform: translate(-50%, -50%)
+    +xs
+      width: 32px

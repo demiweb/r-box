@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import slick from 'slick-carousel';
+import 'slick-carousel';
 import setLazy from './setLazy';
 
 export default function setSliders() {
@@ -17,12 +17,30 @@ export default function setSliders() {
         prevArrow: $prev,
         nextArrow: $next,
         slidesToShow: 4,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       },
     };
 
-    $(slider).on('init', () => {
-      setLazy();
-    });
+    $(slider).on('init', setLazy);
     $(slider).slick(options[name]);
   });
 }

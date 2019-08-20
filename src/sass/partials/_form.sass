@@ -7,11 +7,21 @@
     margin-bottom: 15px
   &--call
     max-width: 330px
+    +xs
+      max-width: none
     #{$this}__field
       margin-bottom: 40px
       text-align: center
+      +lg
+        margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+      +sm
+        margin-bottom: 10px
     #{$this}__bottom
       white-space: nowrap
+      +lg
+        white-space: normal
   &--subscribe
     input
       border-bottom: 1px solid $gray

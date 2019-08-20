@@ -15,12 +15,13 @@ h1, h2, h3, h4, h5, h6
   +os-reg
   display: block
   font-size: 40px
+  +css-lock(24, 40, 320, 1399, font-size)
   line-height: 1
   color: $black-light
   &--h2
-    font-size: 35px
+    +css-lock(21, 35, 320, 1399, font-size)
   &--h4
-    font-size: 21px
+    +css-lock(16, 21, 320, 1399, font-size)
   &--h-bold
     +bold
   
@@ -31,7 +32,7 @@ h1, h2, h3, h4, h5, h6
   position: relative
   padding-bottom: 0.4em
   +before
-    width: 270px
+    +css-lock(100, 270, 320, 1399, width)
     background-color: $accent
     height: 5px
     bottom: 0

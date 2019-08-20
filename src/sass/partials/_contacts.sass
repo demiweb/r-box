@@ -7,6 +7,11 @@
         margin-bottom: 25px
         +md
           margin-bottom: 15px
+    +lg
+      width: 50%
+    +md
+      width: 100%
+      margin-bottom: 15px
   &__social
     text-align: center
   &__btn
@@ -14,13 +19,22 @@
     margin-top: 25px
     width: 100%
     padding-right: 40px
+    +xs
+      padding-right: 0
   &__btn-in
     max-width: 330px
     margin-left: auto
+    +xs
+      max-width: none
   &__map
     position: relative
     padding-top: 40%
     width: percentage(450/690)
+    +lg
+      width: 50%
+    +md
+      width: 100%
+      padding-top: 50%
     iframe
       +coverdiv
 

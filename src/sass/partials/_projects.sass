@@ -1,15 +1,32 @@
 .project-link
-  +flex(flex-end, normal, column)
+  // +flex(flex-end, normal, column)
+  display: block
   +cover
   color: $white
-  height: 480px
-  padding: 20px
+  // height: 480px
+  position: relative
+  padding-top: 145%
   +sm
-    padding: 10px
+    padding-top: 120%
+  +xs
+    padding-top: 80%
+  +xss
+    padding-top: 90%
+  &__content
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 1
+    padding: 20px
+    +sm
+      padding: 10px
   &__title
     display: block
     +bold
     margin-bottom: 10px
+    +sm
+      margin-bottom: 5px
   &__subttl
     color: $white-dark
     display: block

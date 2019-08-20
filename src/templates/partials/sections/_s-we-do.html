@@ -1,9 +1,9 @@
 {%set
   items = [
-    { img: '01.png', price: 'От <strong>1000</strong> грн', title: 'Вывески' },
-    { img: '02.png', price: 'От <strong>300</strong> грн', title: 'Объёмные буквы' },
-    { img: '03.png', price: 'От <strong>2000</strong> грн', title: 'Лайтбоксы и штендеры' },
-    { img: '04.png', price: 'От <strong>300</strong> грн', title: 'Таблички' }
+    { img: '01.png', price: 'От <br> <strong>1000</strong> грн', title: 'Вывески' },
+    { img: '02.png', price: 'От <br> <strong>300</strong> грн', title: 'Объёмные буквы' },
+    { img: '03.png', price: 'От <br> <strong>2000</strong> грн', title: 'Лайтбоксы и штендеры' },
+    { img: '04.png', price: 'От <br> <strong>300</strong> грн', title: 'Таблички' }
   ]
 %}
 
@@ -15,7 +15,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-5">
+      <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8 col-12">
         <div class="section__title">
           <div class="title title--h2 title-under">Что мы делаем</div>
         </div>
@@ -28,7 +28,7 @@
     <div class="section__items">
       <div class="row">
         {% for i in items %}
-          <div class="col-3">
+          <div class="col-lg-3 col-md-6 col-sm-6">
             <!-- begin item -->
             <a href="#" class="item js-lazy" data-background-image="./img/we-do/{{ i.img }}">
               <span class="item__price">{{ i.price | safe  }}</span>

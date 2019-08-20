@@ -16,6 +16,10 @@
       margin-bottom: 25px
     +sm
       margin-bottom: 15px
+    +xs
+      display: block
+      .section__title
+        margin-bottom: 10px
     #{$this}__title
       margin-bottom: 0
   &__subttl
@@ -27,6 +31,9 @@
   &__items
     margin-top: 30px
     margin-bottom: 30px
+  &__contacts
+    +xs
+      margin-bottom: 15px
 
   &--white
     color: $white
@@ -37,6 +44,10 @@
   background-size: 25%
   background-position: 50% 100%
   background-repeat: no-repeat
+  +md
+    background-size: 40%
+  +xs
+    background-size: 70%
   .word
     +css-lock(30, 100, 320, 1499, top)
 

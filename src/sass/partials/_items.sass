@@ -9,14 +9,23 @@
   display: block
   box-shadow: 0px 2px 17px 0px rgba(0, 0, 0, 0.09)
   +tr(transform .3s)
+  height: 100%
   +hover
     +scale(1.1)
     #{$this}__link
       color: $black-light
       .link-arrow__arr
         width: 80px
+  +lg
+    background-size: 80%
+  +md
+    height: calc(100% - 30px)
+    margin-bottom: 30px
   +sm
     padding: 10px
+  +xs
+    margin-bottom: 15px
+    height: calc(100% - 15px)
   &__price
     // position: absolute
     // top: 20px
@@ -25,6 +34,10 @@
   &__content
     display: block
     margin-top: 70%
+    +lg
+      margin-top: 90%
+    +md
+      margin-top: 50%
   &__title
     display: block
     margin-bottom: 15px

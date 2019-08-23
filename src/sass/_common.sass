@@ -14,6 +14,17 @@ body
   fill: currentColor
   font-size: inherit
 
+.out
+  padding-top: $header-height
+  +lg
+    padding-top: $header-height-lg
+  +md
+    padding-top: $header-height-md
+  +sm
+    padding-top: $header-height-sm
+  +xs
+    padding-top: $header-height-xs
+
 .lazy
   &.is-loaded
     animation: fadeIn 1s

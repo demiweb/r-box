@@ -1,5 +1,5 @@
 import { isTouch, isIE } from '../helpers';
-import { NO_TOUCH } from '../constants';
+import { NO_TOUCH, IS_READY } from '../constants';
 
 export function setTouch() {
   if (!isTouch) {
@@ -11,4 +11,8 @@ export function detectIE() {
   if (isIE) {
     document.documentElement.classList.add('is-ie');
   }
+}
+
+export function setReady() {
+  document.body.classList.add(IS_READY);
 }

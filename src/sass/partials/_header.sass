@@ -1,14 +1,37 @@
 .header
   $this: &
   color: $black-light
+  position: fixed
+  z-index: 10
+  left: 0
+  top: 0
+  right: 0
   &__top
     background-color: $white-dark
+    height: $header-top-height
+    +lg
+      height: $header-top-height-lg
+    +md
+      height: $header-top-height-md
+    +sm
+      height: $header-top-height-sm
+    +xs
+      height: $header-top-height-xs
     #{$this}__inner
       justify-content: space-between
       // padding-top: 10px
       // padding-bottom: 10px
   &__bottom
     background-color: $accent
+    height: $header-bottom-height
+    +lg
+      height: $header-bottom-height-lg
+    +md
+      height: $header-bottom-height-md
+    +sm
+      height: $header-bottom-height-sm
+    +xs
+      height: $header-bottom-height-xs
   &__inner
     +flex(flex-start, center)
     padding-top: 10px

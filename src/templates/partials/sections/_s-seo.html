@@ -1,0 +1,21 @@
+<!-- begin section -->
+<section class="section s-stext pt-lg pb-sml">
+  <div class="container">
+    {% if sectionSeo.img %}
+    <div class="row">
+      <div class="col-8">
+        {% include "partials/_seo-text.html" %}
+      </div>
+
+      <div class="col-4">
+        <div class="s-stext__img">
+          <img class="js-lazy" alt="" data-src="./img/lightbox-sm.jpg"/>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    {% include "partials/_seo-text.html" %}
+    {% endif %}
+  </div>
+</section>
+<!-- end section -->

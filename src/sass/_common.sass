@@ -236,3 +236,86 @@ body
   a
     text-decoration: underline
     color: $blue
+
+.list
+  li
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    &::before
+      content: '-'
+      display: inline-block
+      vertical-align: baseline
+      margin-right: 5px
+
+.download
+  display: block
+  position: relative
+  background-color: rgba($black, .7)
+  border: 3px solid  $accent
+  width: 150px
+  height: 150px
+  padding: 25px 10px 25px 30px
+  +sm
+    width: 120px
+    height: 120px
+    padding: 15px 10px 15px 15px
+  &__icon
+    position: absolute
+    top: 45%
+    left: -.5em
+    font-size: 45px
+    display: block
+    +sm
+      font-size: 25px
+      top: 60%
+  &__title
+    text-transform: uppercase
+    display: block
+    +bold
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    .icon
+      margin-left: 5px
+  &__subttl
+    text-decoration: underline
+    display: block
+
+.download-sm
+  color: $accent
+  text-transform: uppercase
+  +bold
+  .icon
+    margin-left: .5em
+
+.cloud
+  position: absolute
+  left: 20%
+  top: -220px
+  +image('cloud.png')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: 50% 0
+  // padding-left: 130px
+  // padding-top: 34%
+  // width: percentage(5/12)
+  width: 540px
+  height: 430px
+  &__title
+    margin-bottom: 15px
+    max-width: 270px
+    +md
+      margin-bottom: 10px
+  &__inner
+    position: absolute
+    top: 18%
+    left: 50%
+    transform: translate(-50%, 0)
+
+.order-list
+  font-size: $fz-sm
+  ol
+    list-style-type: decimal
+    margin-left: 1.1em
+

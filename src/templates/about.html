@@ -1,0 +1,77 @@
+---
+title: about
+page: about
+hero: {
+  mod: 'hero--sm',
+  bg: 'bg-hero-about.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'О нас', modLink: 'is-active' }
+    ]
+  },
+  title: {
+    title: 'О компании'
+  },
+  subttl: {
+    title: 'Рекламный центр <span class="fz-bigger accent">R.Box -</span>'
+  },
+  subttlScnd: {
+    title: 'ваш надежный партнер в изготовлении наружной и интерьерной рекламы'
+  },
+  scroll: true
+}
+sectionSeo: {
+  img: true
+}
+features: {
+  list: [
+    {
+      icon: 'diamond',
+      title: 'Качество',
+      text: 'Мы выполняем все работы на совесть, используя <br>
+лучшие импортные, сертифицированные <br>
+и безопасные материалы'
+    },
+    {
+      icon: 'shield-2',
+      title: 'Гарантия',
+      text: 'Гарантийное обслуживание <br>
+на протяжении 365 дней <br>
+с момента установки'
+    },
+    {
+      icon: 'lawyer',
+      title: 'Профессионалы своего дела',
+      text: 'У нас работают опытные  <br>
+и ответственные специалисты, которые выполняют работы в срок и без задержек”'
+    },
+    {
+      icon: 'manufacturing',
+      title: 'Собственное производство',
+      text: 'Все работы по изготовлению рекламных конструкций <br>
+выполняются непосредственно сотрудниками <br>
+R.Box на базе собственного производства'
+    },
+    {
+      icon: 'diamond',
+      title: 'Только оригинал',
+      text: 'Каждая рекламная конструкция оригинальна, <br>
+сделана с учетом ваших <br>
+пожеланий'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+ {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-seo.html" %}
+ {% include "partials/sections/_s-features.html" %}
+ {% include "partials/sections/_s-steps.html" %}
+ {% include "partials/sections/_s-order.html" %}
+ {% include "partials/sections/_s-projects.html" %}
+ {% include "partials/sections/_s-we-do.html" %}
+{% endblock %}

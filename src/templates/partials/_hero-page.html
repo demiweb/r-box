@@ -1,0 +1,46 @@
+<!-- begin hero -->
+<section class="hero{% if hero.mod %} {{ hero.mod }}{% endif %}">
+  <div class="hero__bg{% if hero.bg %} js-lazy{% endif %}" {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}>
+    {% if hero.video %}
+    <video class="js-lazy" data-src="./video/Abstract - 18784.mp4" loop="" autoplay="" muted="" playsinline=""></video>
+    {% endif %}
+  </div>
+
+  <div class="container">
+    {% if hero.breadcrumbs %}
+    <div class="hero__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: hero.breadcrumbs.mod, item: '', link: '' },
+        list = hero.breadcrumbs.list
+      ) }}
+    </div>
+    {% endif %}
+
+    <div class="hero__content">
+      {% if hero.title %}
+      <div class="hero__title">
+        <div class="title title--accent title--lg title--shadow">{{ hero.title.title | safe }}</div>
+      </div>
+      {% endif %}
+      {% if hero.subttl %}
+      <div class="hero__subttl">
+        <div class="title title--h2 title--white">{{ hero.subttl.title | safe }}</div>
+      </div>
+      {% endif %}
+      {% if hero.subttlScnd %}
+      <div class="hero__subttl-scnd">{{ hero.subttlScnd.title | safe }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if hero.scroll %}
+  <div class="hero__scroll">
+    <a href="#" class="scroll-down js-scroll-down">
+      <span class="scroll-down__title">Узнать больше</span>
+      <span class="scroll-down__arrow"><span></span></span>
+    </a>
+  </div>
+  {% endif %}
+</section>
+<!-- end hero -->

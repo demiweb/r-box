@@ -1,4 +1,5 @@
 .hero
+  $this: &
   +cover
   position: relative
   color: $white
@@ -79,3 +80,12 @@
     left: 50%
     transform: translate(-50%, 0)
     bottom: 25px
+  &__breadcrumbs
+    padding-top: 20px
+
+  &--sm
+    margin-bottom: 0
+    #{$this}__content
+      padding-top: 10%
+      padding-bottom: 20%
+

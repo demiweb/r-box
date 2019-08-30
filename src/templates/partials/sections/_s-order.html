@@ -1,0 +1,119 @@
+{%set
+form = [
+  {
+    name: 'input',
+    type: 'text',
+    mod: 'input--gray',
+    placeholder: '',
+    fieldClass: 'js-input',
+    label: { first: 'Введите ваше имя <sup>*</sup>' }
+  },
+  {
+    name: 'input',
+    type: '',
+    mod: 'input--gray',
+    placeholder: '',
+    fieldClass: 'js-input',
+    label: { first: 'Введите ваш телефон<sup>*</sup>' }
+  },
+  {
+    name: 'input',
+    type: '',
+    mod: 'input--gray',
+    placeholder: '',
+    fieldClass: 'js-input',
+    label: { first: 'Введите ваш Email <sup>*</sup>' }
+  },
+  {
+    name: 'textarea',
+    type: '',
+    mod: 'textarea--gray',
+    placeholder: '',
+    fieldClass: 'js-textarea',
+    label: { first: 'Комментарий (необязательно)' }
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--bg s-order pt-sml pb-sml js-lazy" data-background-image="./img/bg-order.jpg">
+  <div class="cloud">
+    <div class="cloud__inner">
+      <div class="cloud__title">
+        <div class="title title--h5">Давайте обсудим, что вам нужно учитывать
+при заказе  наружной рекламы:</div>
+      </div>
+
+      <div class="cloud__list">
+        <!-- begin order-list -->
+        <div class="order-list">
+          <ol>
+            <li>Вид объекта наружной рекламы</li>
+            <li>Размер объекта (ширина, высота, длина)</li>
+            <li>Размер букв</li>
+            <li>Место крепления</li>
+            <li>Тип и цвет подсветки</li>
+            <li>Материал для изготовления каркаса объекта наружной рекламы</li>
+            <li>Материал для изготовления букв</li>
+            <li>Цвет изделия</li>
+          </ol>
+        </div>
+        <!-- end order-list -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="s-order__left">
+          <div class="s-order__title">
+            <div class="title title--h2">Готов вам ответить на все вопросы
+            и подсказать, что делать дальше.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="section__title glitch glitch--h2" data-text="Заполняйте заявку">
+          <div class="title title--h2 title-under">Заполняйте заявку и я лично перезвоню вам</div>
+        </div>
+
+        <div class="s-order__form">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <div class="form__inner">
+                <div class="form__row">
+                  {% for i in form %}
+                  <div class="form__field">
+                    {{ mixins.input(
+                      name = i.name,
+                      mod = i.mod,
+                      type = i.type,
+                      placeholder = i.placeholder,
+                      value = '',
+                      fieldClass = i.fieldClass,
+                      label = i.label
+                    ) }}
+                  </div>
+                  {% endfor %}
+
+                  <div class="form__field">
+                    {{ mixins.btn(
+                      title = '<span>Оставить заявку</span>',
+                      mod = 'btn--full',
+                      href = false
+                    ) }}
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

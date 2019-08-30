@@ -14,5 +14,5 @@ export function detectIE() {
 }
 
 export function setReady() {
-  document.body.classList.add(IS_READY);
+  document.documentElement.classList.add(IS_READY);
 }

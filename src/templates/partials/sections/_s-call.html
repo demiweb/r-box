@@ -1,10 +1,98 @@
+{%set
+form = [
+  {
+    wrapMod: 'form__field-50',
+    name: 'input',
+    type: 'text',
+    fieldClass: '',
+    fieldAttributes: '',
+    placeholder: 'Введите ваше имя',
+    label: '',
+    options: ''
+  },
+  {
+    wrapMod: 'form__field-50',
+    name: 'select',
+    type: '',
+    fieldClass: 'js-select',
+    fieldAttributes: { 'data-type': 'default' },
+    placeholder: '',
+    label: '',
+    options: [
+      { value: '1', option: 'Штендер' },
+      { value: '2', option: 'Штендер1' },
+      { value: '3', option: 'Штендер2' }
+    ]
+  },
+  {
+    wrapMod: 'form__field-50',
+    name: 'input',
+    type: 'tel',
+    fieldClass: '',
+    fieldAttributes: '',
+    placeholder: 'Введите ваш телефон',
+    label: '',
+    options: ''
+  },
+  {
+    wrapMod: 'form__field-50',
+    name: 'input',
+    type: 'email',
+    fieldClass: '',
+    fieldAttributes: '',
+    placeholder: 'Введите ваш Email',
+    label: '',
+    options: ''
+  },
+  {
+    name: 'textarea',
+    type: '',
+    fieldClass: 'js-textarea',
+    fieldAttributes: '',
+    placeholder: 'Добавьте краткий комментарий',
+    label: '',
+    options: ''
+  }
+]
+%}
+
 <!-- begin section  -->
 <section class="section s-call section--bg section--white pt-lgl pb-lgl js-lazy" data-background-image="./img/bg-call.jpg">
   <div class="container">
     <div class="row">
-      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-7 offset-xl-7 offset-lg-6 offset-md-6 offset-sm-5">
-        <div class="section__title glitch glitch--h2 glitch--red-white" data-text="Оставьте ваш контактный">
-          <div class="title title--h2 title--white title-under">Оставьте ваш контактный телефон и мы перезвоним вам</div>
+      <div class="col-md-6">
+        <div class="s-call__left">
+          <div class="section__title">
+            <div class="title title--h4 title--h-bold title--white title-under title-under--sm ">Заполняйте заявку прямо сейчас <br>
+              и вы гарантировано получите:
+            </div>
+          </div>
+
+          {{ mixins.list(
+            name = 'list',
+            modifications = { wrap: 'text--gray', item: '', link: '' },
+            list = [
+              { item: 'профессиональную и детализированную консультацию нашего специалиста; ' },
+              { item: 'бесплатный выезд мастера для осуществления замеров и осмотра места монтажа объекта наружной рекламы;' },
+              { item: 'бесплатный дизайн объекта наружной рекламы;' },
+              { item: 'просчет сметы для выполнения работ.' }
+            ]
+          ) }}
+
+          <!-- begin download -->
+          <a href="#" class="download">
+            <span class="download__title">pdf {{ mixins.icon('download') }}</span>
+            <span class="download__icon">{{ mixins.icon('pdf') }}</span>
+            <span class="download__subttl">Скачайте наш
+            прайс-лист </span>
+          </a>
+          <!-- end download -->
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="section__title glitch glitch--h2 glitch--red-white" data-text="Оставить заявку">
+          <div class="title title--h2 title--white title-under">Оставить заявку</div>
         </div>
 
         <div class="section__subttl text--gray">При заказе от 10 000 грн выезд мастера <br> и замеры площади проводятся бесплатно</div>
@@ -13,22 +101,43 @@
           <!-- begin form -->
           <div class="form form--call">
             <form>
-              <div class="form__field">
-                {{ mixins.input(
-                  name = 'input',
-                  type = 'tel',
-                  fieldClass = 'js-mask',
-                  fieldAttributes = { 'data-mask': 'phone' },
-                  placeholder = '+3 ( _ _ _ ) _ _ _ - _ _ - _ _',
-                  label = { first:  mixins.icon('smartphone') }
-                ) }}
-              </div>
-              <div class="form__btn">
-                {{ mixins.btn(
-                  title = '<span>Заказать звонок</span>',
-                  mod = 'btn--full',
-                  href = false
-                ) }}
+              <div class="form__inner">
+                <div class="form__row">
+                  {% for i in form %}
+                  <div class="form__field{% if i.wrapMod %} {{ i.wrapMod }}{% endif %}">
+                    {{ mixins.input(
+                      name = i.name,
+                      type = i.type,
+                      fieldClass = i.fieldClass,
+                      fieldAttributes = i.fieldAttributes,
+                      placeholder = i.placeholder,
+                      label = i.label,
+                      options = i.options
+                    ) }}
+                  </div>
+                  {% endfor %}
+                  <div class="form__field form__attach">
+                    <!-- begin attach -->
+                    <label class="attach">
+                      {{ mixins.icon('attach') }}
+                      <input type="file">
+                      <span>При необходимости <span class="underline">прикрепите фото</span> или другой файл до 2 Мб (jpeg, png, doc, docx, rtf, pdf, zip, rar)</span>
+                    </label>
+                    <!-- end attach -->
+                  </div>
+
+                  <div class="form__field form__field-50 form__field-center form__captcha">
+                    <img class="js-lazy" alt="" data-src="./img/captcha.jpg"/>
+                  </div>
+
+                  <div class="form__field form__field-50 form__field-center form__btn">
+                    {{ mixins.btn(
+                      title = '<span>Заказать звонок</span>',
+                      mod = 'btn--full',
+                      href = false
+                    ) }}
+                  </div>
+                </div>
               </div>
             </form>
 

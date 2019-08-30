@@ -66,18 +66,21 @@
               <!-- begin form -->
               <div class="form form--subscribe">
                 <form>
-                  <div class="form__field">
-                    {{ mixins.input(
-                      name = 'input',
-                      type = 'email',
-                      mod = 'input--reg',
-                      placeholder = 'Введите ваш Email'
-                    ) }}
-                    {{ mixins.btn(
-                      title = '',
-                      mod = 'btn--arr',
-                      href = false
-                    ) }}
+                  <div class="form__inner">
+                    <div class="form__row">
+                      <div class="form__field">
+                        <!-- begin input -->
+                        <div class="input input--gray">
+                          <input type="email" placeholder="Введите ваш Email">
+                          {{ mixins.btn(
+                            title = '',
+                            mod = 'btn--arr',
+                            href = false
+                          ) }}
+                        </div>
+                        <!-- end input -->                         
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -85,14 +88,40 @@
             </div>
 
             <div class="footer__social">
-              {{ mixins.list(
-                name = 'social',
-                modifications = { wrap: '', item: '', link: '' },
-                list = [
-                  { link: mixins.icon('facebook-circle') },
-                  { link: mixins.icon('instagram-circle') }
-                ]
-              ) }}
+              <div class="footer__social-block">
+                <div class="footer__social-title">
+                  <div class="title title--h4">Мы в соцсетях:</div>
+                </div>
+                {{ mixins.list(
+                  name = 'social',
+                  modifications = { wrap: '', item: '', link: '' },
+                  list = [
+                    { link: mixins.icon('facebook-circle') },
+                    { link: mixins.icon('instagram-circle') }
+                  ]
+                ) }}
+              </div>
+
+              <div class="footer__social-block">
+                <div class="footer__social-title">
+                  <div class="title title--h4">Напишите нам:</div>
+                </div>
+                {{ mixins.list(
+                  name = 'social',
+                  modifications = { wrap: '', item: '', link: '' },
+                  list = [
+                    { item: '', link: mixins.icon('viber-square'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('whatsapp'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('messenger'), modItem: '', modLink: '' },
+                    { item: '', link: mixins.icon('telegram'), modItem: '', modLink: '' }
+                  ]
+                ) }}
+              </div>
+            </div>
+
+            <div class="footer__download">
+              <div class="title title--h4">Скачайте наш прайс:</div>
+              <a class="download-sm" href="#">pdf {{ mixins.icon('download') }}</a>
             </div>
           </div>
         </div>

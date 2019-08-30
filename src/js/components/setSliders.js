@@ -13,7 +13,7 @@ export default function setSliders() {
     const $prev = $wrap.find('.js-prev');
     const $next = $wrap.find('.js-next');
     const options = {
-      projects: {
+      items: {
         prevArrow: $prev,
         nextArrow: $next,
         slidesToShow: 4,

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>home</title>
+    <title>projects</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
@@ -209,46 +209,26 @@
       <!-- begin main -->
       <main class="main">
         <!-- begin hero -->
-        <section class="hero">
-          <div class="hero__bg">
-            <video class="js-lazy" data-src="./video/Abstract - 18784.mp4" loop="" autoplay="" muted="" playsinline=""></video>
+        <section class="hero hero--sm hero--no-cover">
+          <div class="hero__bg js-lazy" data-background-image="./img/hero/bg-hero-projects.jpg">
           </div>
           <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="hero__img">
-                  <img data-src="./img/lightbox.png" alt="" class="js-lazy">
-                </div>
+            <div class="hero__breadcrumbs">
+              <!-- begin breadcrumbs -->
+              <div class="breadcrumbs">
+                <ul>
+                  <li><a href="#">Главная</a></li>
+                  <li>-</li>
+                  <li><a href="#" class=" is-active">Проекты</a></li>
+                </ul>
               </div>
-              <div class="col-sm-6">
-                <div class="hero__content">
-                  <div class="hero__title">
-                    <div class="title title--white"><span class="glitch" data-text="Сделаем лучшую">Сделаем лучшую</span> <span class="accent fz-bigger">наружную <br> рекламу</span> для вашего бизнеса в Киеве</div>
-                  </div>
-                  <div class="hero__nav">
-                    <!-- begin nav -->
-                    <nav class=" nav-hero">
-                      <ul>
-                        <li><a href="#">Вывески</a></li>
-                        <li><a href="#">Штендеры</a></li>
-                        <li><a href="#">Объемные буквы</a></li>
-                        <li><a href="#">Таблички</a></li>
-                        <li><a href="#">Лайтбоксы</a></li>
-                      </ul>
-                    </nav>
-                    <!-- end nav -->
-                  </div>
-                  <div class="hero__btn">
-                    <button class="btn"><span>Заказать услугу</span></button>
-                  </div>
-                  <div class="hero__guar">
-                    <svg height="1em" viewBox="-28 1 511 511.999" width="0.998em" class="icon icon-shield">
-                      <path d="M403.164 85.2c-15.848-2.005-31.336-5.52-46.027-10.446a7.501 7.501 0 00-4.77 14.223c15.63 5.242 32.086 8.976 48.918 11.105 25.242 3.195 43.258 26.492 40.156 51.93-4.066 33.36-11.511 83.152-23.886 130.918-13.48 52.027-29.301 88.226-47.024 107.593-36.394 39.77-82.023 75.02-113.89 97.586-16.746 11.86-39.246 11.86-55.989 0-31.867-22.566-77.496-57.816-113.89-97.586-17.723-19.367-33.547-55.566-47.024-107.593-12.375-47.766-19.82-97.559-23.89-130.918-3.098-25.438 14.914-48.735 40.16-51.93 72.77-9.203 121-45.766 148.648-74.816C210.957 18.648 219.476 15 228.645 15s17.687 3.648 23.992 10.266c19.918 20.93 42.941 37.996 68.43 50.726a7.501 7.501 0 0010.062-3.36c1.848-3.706.344-8.21-3.36-10.058-23.93-11.953-45.55-27.984-64.269-47.648C254.34 5.3 241.96 0 228.645 0c-13.317 0-25.696 5.3-34.856 14.926C167.82 42.21 122.512 76.55 54.125 85.199 20.711 89.426-3.141 120.215.957 153.83c6.984 57.288 28.25 196.023 74.738 246.823 37.29 40.746 83.82 76.707 116.285 99.7C202.945 508.117 215.793 512 228.645 512c12.847-.004 25.699-3.883 36.664-11.648 32.464-22.993 78.996-58.954 116.285-99.7 46.492-50.8 67.754-189.535 74.738-246.824 4.098-33.613-19.754-64.402-53.168-68.629zm0 0" />
-                      <path d="M211.723 70.453c-37.942 32.832-82.235 54.32-131.645 63.867-15.055 2.91-25.219 17.145-23.14 32.41 3.496 25.668 10.644 73.672 19.218 106.766 15.63 60.336 30.742 83.309 38.36 91.629 25.039 27.36 71.5 63.918 96.964 83.273 5.055 3.84 11.11 5.758 17.165 5.758 6.054 0 12.109-1.918 17.164-5.758 25.464-19.355 71.925-55.914 96.964-83.273 7.618-8.32 22.73-31.293 38.36-91.629 8.578-33.101 15.722-81.101 19.222-106.766 2.079-15.265-8.09-29.5-23.144-32.41-49.41-9.547-93.703-31.035-131.645-63.867-9.648-8.348-24.195-8.348-33.843 0zm173.77 94.25c-3.454 25.34-10.497 72.676-18.88 105.031-15.8 60.993-30.71 80.68-34.902 85.266-25.152 27.48-74.8 66.117-94.98 81.453-4.762 3.621-11.41 3.621-16.172 0-20.18-15.336-69.829-53.976-94.977-81.453-4.195-4.586-19.105-24.273-34.906-85.266-8.38-32.347-15.422-79.687-18.875-105.03-1.008-7.38 3.879-14.255 11.12-15.657 52.028-10.05 98.665-32.676 138.618-67.25a10.835 10.835 0 017.106-2.633c2.539 0 5.082.879 7.105 2.633 39.953 34.574 86.59 57.2 138.617 67.25 7.242 1.402 12.13 8.277 11.125 15.656zm0 0" />
-                      <path d="M187.05 234.066c-5.64-4.593-24.679-14.078-38.312 3.934-13.629 18.008-1.707 33.719 3.934 38.313l21.75 17.695c3.21 2.613 7.937 2.133 10.55-1.082a7.507 7.507 0 00-1.081-10.555l-21.75-17.695c-2.532-2.063-8.063-8.778-1.766-17.211 6.297-8.43 14.676-3.828 17.207-1.766l45.035 36.645a7.498 7.498 0 0010.012-.492l65.902-65.286c4.793-4.75 12.551-4.71 17.301.082 4.746 4.79 4.707 12.551-.082 17.297l-78.496 77.766c-6.215 5.992-13.059 3.496-16.328.797l-12.461-10.137a7.5 7.5 0 10-9.469 11.633l12.461 10.14a27.308 27.308 0 0017.184 6.11c7.23 0 14.039-2.8 19.172-7.887l78.492-77.762c10.668-10.57 10.75-27.847.18-38.515-10.567-10.664-27.844-10.746-38.512-.18l-61.118 60.547zm0 0" />
-                    </svg> Оказываем гарантийное обслуживание для ваших <br> вывесок в течении <span class="accent">360</span> дней </div>
-                </div>
+              <!-- end breadcrumbs -->
+            </div>
+            <div class="hero__content">
+              <div class="hero__title">
+                <div class="title title--accent title--lg title--shadow">Проекты</div>
               </div>
+              <div class="hero__subttl-scnd">Нам есть, чем гордиться. Листайте вниз :)</div>
             </div>
           </div>
           <div class="hero__scroll">
@@ -260,409 +240,98 @@
         </section>
         <!-- end hero -->
         <!-- begin section -->
-        <section class="section overflow-hidden s-stext pt-lg pb-sml">
-          <div class="container">
-            <!-- begin scroll-text -->
-            <div class="scroll-text js-scrollbar">
-              <article>
-                <h1>Какая реклама самая востребованная на рынке?</h1>
-                <p>Если определять чемпиона среди <strong>световых вывесок,</strong> то им наверняка окажется <em>лайтбокс</em>, как самый востребованный тип <a href="#">наружной рекламы.</a> Компания Март Груп, еше в далеком 2004 году, в начале своей деятельности, освоила разработку и производство данного вида визуальных вывесок. Популярность лайтбоксов у разных заказчиков определяется органичной возможностью совмещения не очень большой по размерам вывески, с ее хорошей световой подачей:</p>
-                <ul>
-                  <li>Стоимость</li>
-                  <li>Время работ</li>
-                  <li>Качество</li>
-                </ul>
-              </article>
-              <article>
-                <h2>Из чего делают лайтбоксы?</h2>
-                <ol>
-                  <li>По конструкции лайтбоксы обычно представляют собой прямоугольный короб на раме, лицевая часть которого является носителем рекламного сообщения. </li>
-                  <li>В темное время суток, изнутри этот короб подсвечивается люминесцентными лампами либо светодиодными модулями. </li>
-                  <li>Еще один секрет популярности лайтбаксов - это сравнительно небольшая цена, при не самой высокой сложности изготовления. В соответствии с их стоимостью производство лайтбоксов можно условно разделить на три их вида.</li>
-                </ol>
-              </article>
-              <article>
-                <h2>Из чего делают лайтбоксы?</h2>
-                <ol>
-                  <li>По конструкции лайтбоксы обычно представляют собой прямоугольный короб на раме, лицевая часть которого является носителем рекламного сообщения. </li>
-                  <li>В темное время суток, изнутри этот короб подсвечивается люминесцентными лампами либо светодиодными модулями. </li>
-                  <li>Еще один секрет популярности лайтбаксов - это сравнительно небольшая цена, при не самой высокой сложности изготовления. В соответствии с их стоимостью производство лайтбоксов можно условно разделить на три их вида.</li>
-                </ol>
-              </article>
-              <article>
-                <h2>Из чего делают лайтбоксы?</h2>
-                <ol>
-                  <li>По конструкции лайтбоксы обычно представляют собой прямоугольный короб на раме, лицевая часть которого является носителем рекламного сообщения. </li>
-                  <li>В темное время суток, изнутри этот короб подсвечивается люминесцентными лампами либо светодиодными модулями. </li>
-                  <li>Еще один секрет популярности лайтбаксов - это сравнительно небольшая цена, при не самой высокой сложности изготовления. В соответствии с их стоимостью производство лайтбоксов можно условно разделить на три их вида.</li>
-                </ol>
-              </article>
-              <article>
-                <h2>Из чего делают лайтбоксы?</h2>
-                <ol>
-                  <li>По конструкции лайтбоксы обычно представляют собой прямоугольный короб на раме, лицевая часть которого является носителем рекламного сообщения. </li>
-                  <li>В темное время суток, изнутри этот короб подсвечивается люминесцентными лампами либо светодиодными модулями. </li>
-                  <li>Еще один секрет популярности лайтбаксов - это сравнительно небольшая цена, при не самой высокой сложности изготовления. В соответствии с их стоимостью производство лайтбоксов можно условно разделить на три их вида.</li>
-                </ol>
-              </article>
-              <article>
-                <h2>Из чего делают лайтбоксы?</h2>
-                <ol>
-                  <li>По конструкции лайтбоксы обычно представляют собой прямоугольный короб на раме, лицевая часть которого является носителем рекламного сообщения. </li>
-                  <li>В темное время суток, изнутри этот короб подсвечивается люминесцентными лампами либо светодиодными модулями. </li>
-                  <li>Еще один секрет популярности лайтбаксов - это сравнительно небольшая цена, при не самой высокой сложности изготовления. В соответствии с их стоимостью производство лайтбоксов можно условно разделить на три их вида.</li>
-                </ol>
-              </article>
-            </div>
-            <!-- end scroll-text -->
-          </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
         <section class="section s-projects overflow-hidden pt-lgl pb-sml">
           <div class="word">
             <div class="word__inner">Projects</div>
           </div>
           <div class="container">
-            <div class="section__top">
-              <div class="section__title glitch glitch--h2" data-text="Наши проекты">
-                <div class="title title--h2 title-under">Наши проекты</div>
-              </div>
-              <div class="section__link">
-                <a href="#" class="link-arrow">
-                  <span class="link-arrow__title">Смотреть все проекты</span>
-                  <span class="link-arrow__arr"></span>
-                </a>
-              </div>
+            <div class="section__title glitch glitch--h2" data-text="Наши проекты">
+              <div class="title title--h2 title-under">Наши проекты</div>
             </div>
-            <div class="section__slider">
-              <!-- begin slider -->
-              <div class="slider__wrap slider--items__wrap">
-                <div class="slider slider--items js-slider js-lightgallery" data-slider="items">
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_03.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_03.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Лайтбокс для автомобильно сервиса «Шина»</span>
-                        <span class="project-link__subttl">Июнь 2018</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_05.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_05.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Рекламный щит для реп-исполнителя «Noize MC»</span>
-                        <span class="project-link__subttl">Август 2018</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_07.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_07.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Вывеска для кофе-шопа «Expresso Room»</span>
-                        <span class="project-link__subttl">Июнь 2018</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_09.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_09.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Вывеска для магазина техники «Цитрус»</span>
-                        <span class="project-link__subttl">Август 2019</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_03.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_03.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Лайтбокс для автомобильно сервиса «Шина»</span>
-                        <span class="project-link__subttl">Июнь 2018</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_05.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_05.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Рекламный щит для реп-исполнителя «Noize MC»</span>
-                        <span class="project-link__subttl">Август 2018</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_07.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_07.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Вывеска для кофе-шопа «Expresso Room»</span>
-                        <span class="project-link__subttl">Июнь 2018</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                  <!-- begin project-link -->
-                  <a href="./img/slider/projects/01_09.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_09.jpg">
-                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
-                      <span class="project-link__content">
-                        <span class="project-link__title">Вывеска для магазина техники «Цитрус»</span>
-                        <span class="project-link__subttl">Август 2019</span>
-                      </span>
-                    </span>
-                  </a>
-                  <!-- end project-link -->
-                </div>
-                <button class="slider__prev prev js-prev"></button>
-                <button class="slider__next next js-next"></button>
-              </div>
-              <!-- end slider -->
+            <!-- begin projects -->
+            <div class="projects js-lightgallery">
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_03.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_03.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Лайтбокс для автомобильно сервиса «Шина»</span>
+                    <span class="project-link__subttl">Июнь 2018</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_05.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_05.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Рекламный щит для реп-исполнителя «Noize MC»</span>
+                    <span class="project-link__subttl">Август 2018</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_07.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_07.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Вывеска для кофе-шопа «Expresso Room»</span>
+                    <span class="project-link__subttl">Июнь 2018</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_09.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_09.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Вывеска для магазина техники «Цитрус»</span>
+                    <span class="project-link__subttl">Август 2019</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_03.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_03.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Лайтбокс для автомобильно сервиса «Шина»</span>
+                    <span class="project-link__subttl">Июнь 2018</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_05.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_05.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Рекламный щит для реп-исполнителя «Noize MC»</span>
+                    <span class="project-link__subttl">Август 2018</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_07.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_07.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Вывеска для кофе-шопа «Expresso Room»</span>
+                    <span class="project-link__subttl">Июнь 2018</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
+              <!-- begin project-link -->
+              <a href="./img/slider/projects/01_09.jpg" class="project-link js-lazy" data-exthumbimage="./img/slider/projects/01_09.jpg">
+                <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
+                  <span class="project-link__content">
+                    <span class="project-link__title">Вывеска для магазина техники «Цитрус»</span>
+                    <span class="project-link__subttl">Август 2019</span>
+                  </span>
+                </span>
+              </a>
+              <!-- end project-link -->
             </div>
-          </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
-        <section class="section overflow-hidden pt-lgl pb-sm">
-          <div class="word">
-            <div class="word__inner">What we do</div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8">
-                <div class="section__title glitch glitch--h2" data-text="Что мы делаем">
-                  <div class="title title--h2 title-under">Что мы делаем</div>
-                </div>
-                <div class="section__subttl">Мы создаем для вас вывески, лайтбоксы, штендеры и другие объекты (конструкции) наружной рекламы, которые уверенно помогут вашему бизнесу громко заявить о себе.</div>
-              </div>
-            </div>
-            <div class="section__items">
-              <!-- begin slider -->
-              <div class="slider__wrap slider--items__wrap">
-                <div class="slider slider--items js-slider" data-slider="items">
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/01.png">
-                      <span class="item__price">От <br> <strong>1000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Вывески</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/02.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Объёмные буквы</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/03.png">
-                      <span class="item__price">От <br> <strong>2000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Лайтбоксы и штендеры</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/04.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Таблички</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/01.png">
-                      <span class="item__price">От <br> <strong>1000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Вывески</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/02.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Объёмные буквы</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/03.png">
-                      <span class="item__price">От <br> <strong>2000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Лайтбоксы и штендеры</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/04.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Таблички</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                </div>
-                <button class="slider__prev prev js-prev"></button>
-                <button class="slider__next next js-next"></button>
-              </div>
-              <!-- end slider -->
-            </div>
-          </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
-        <section class="section s-about overflow-hidden pt-lgl pb-lgl js-lazy" data-background-image="./img/dude.png">
-          <div class="word">
-            <div class="word__inner">about</div>
-          </div>
-          <div class="container">
-            <!-- begin about -->
-            <div class="about">
-              <div class="row">
-                <div class="col-lg-6 col-md-5 col-sm-4">
-                  <div class="about__content">
-                    <div class="section__title glitch glitch--h2" data-text="Расскажем">
-                      <div class="title title--h2 title-under">Расскажем немного о себе</div>
-                    </div>
-                    <div class="section__subtll"> Мы занимаемся производством и <br> установкой наружной рекламы. Делаем <br> это качественно, поэтому к нам всегда <br> возвращаются. </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-7 col-sm-8">
-                  <div class="about__items">
-                    <!-- begin about-items -->
-                    <div class="about-items">
-                      <!-- begin about-item -->
-                      <div class="about-item__wrap">
-                        <div class="about-item js-lazy" data-background-image="./img/about/01.png" style="background-color: #e9f1f4">
-                          <div class="about-item__content">
-                            <div class="about-item__title">
-                              <div class="title title--h4 title-under title-under--sm">Как доставляем</div>
-                            </div>
-                            <div class="about-item__text" style="color: #a0b1b7">Доставляем на точку сбора по всему Киеву, собираем и устанавливаем на месте</div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- end about-item -->
-                      <!-- begin about-item -->
-                      <div class="about-item__wrap">
-                        <div class="about-item js-lazy" data-background-image="./img/about/02.png" style="background-color: #ffc600">
-                          <div class="about-item__content">
-                            <div class="about-item__title">
-                              <div class="title title--h4 title-under title-under--sm title-under--inherit">Какие гарантии</div>
-                            </div>
-                            <div class="about-item__text" style="color: #9d7c07">Доставляем на точку сбора по всему Киеву, собираем и устанавливаем на месте</div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- end about-item -->
-                      <!-- begin about-item -->
-                      <div class="about-item__wrap">
-                        <div class="about-item js-lazy" data-background-image="./img/about/03.png" style="background-color: #262626">
-                          <div class="about-item__content">
-                            <div class="about-item__title">
-                              <div class="title title--h4 title-under title-under--sm title--white">Как принимаем оплату</div>
-                            </div>
-                            <div class="about-item__text" style="color: #939393">Доставляем на точку сбора по всему Киеву, собираем и устанавливаем на месте</div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- end about-item -->
-                    </div>
-                    <!-- end about-items -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end about -->
+            <!-- end projects -->
           </div>
         </section>
         <!-- end section -->

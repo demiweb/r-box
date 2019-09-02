@@ -209,7 +209,7 @@
       <!-- begin main -->
       <main class="main">
         <!-- begin hero -->
-        <section class="hero hero--sm">
+        <section class="hero hero--sm hero--no-cover">
           <div class="hero__bg js-lazy" data-background-image="./img/hero/bg-hero-about.jpg">
           </div>
           <div class="container">
@@ -243,10 +243,10 @@
         </section>
         <!-- end hero -->
         <!-- begin section -->
-        <section class="section s-stext pt-lg pb-sml">
+        <section class="section overflow-hidden s-stext pt-lg pb-sml">
           <div class="container">
             <div class="row">
-              <div class="col-8">
+              <div class="col-sm-8">
                 <!-- begin scroll-text -->
                 <div class="scroll-text js-scrollbar">
                   <article>
@@ -301,7 +301,7 @@
                 </div>
                 <!-- end scroll-text -->
               </div>
-              <div class="col-4">
+              <div class="col-sm-4">
                 <div class="s-stext__img">
                   <img class="js-lazy" alt="" data-src="./img/lightbox-sm.jpg" />
                 </div>
@@ -328,7 +328,7 @@
               <!-- begin features -->
               <div class="features">
                 <div class="row justify-content-center">
-                  <div class="col-4">
+                  <div class="col-sm-4 col-6">
                     <!-- begin feature -->
                     <div class="feature">
                       <div class="feature__icon">
@@ -349,7 +349,7 @@
                     </div>
                     <!-- end feature -->
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4 col-6">
                     <!-- begin feature -->
                     <div class="feature">
                       <div class="feature__icon">
@@ -373,7 +373,7 @@
                     </div>
                     <!-- end feature -->
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4 col-6">
                     <!-- begin feature -->
                     <div class="feature">
                       <div class="feature__icon">
@@ -395,7 +395,7 @@
                     </div>
                     <!-- end feature -->
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4 col-6">
                     <!-- begin feature -->
                     <div class="feature">
                       <div class="feature__icon">
@@ -416,7 +416,7 @@
                     </div>
                     <!-- end feature -->
                   </div>
-                  <div class="col-4">
+                  <div class="col-sm-4 col-6">
                     <!-- begin feature -->
                     <div class="feature">
                       <div class="feature__icon">
@@ -461,7 +461,7 @@
             <!-- begin steps -->
             <div class="steps">
               <div class="row">
-                <div class="col-4">
+                <div class="col-sm-4 col-6">
                   <!-- begin step -->
                   <div class="step">
                     <div class="step__img">
@@ -474,7 +474,7 @@
                   </div>
                   <!-- end step -->
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 col-6">
                   <!-- begin step -->
                   <div class="step">
                     <div class="step__img">
@@ -487,7 +487,7 @@
                   </div>
                   <!-- end step -->
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 col-6">
                   <!-- begin step -->
                   <div class="step">
                     <div class="step__img">
@@ -500,7 +500,7 @@
                   </div>
                   <!-- end step -->
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 col-6">
                   <!-- begin step -->
                   <div class="step">
                     <div class="step__img">
@@ -513,7 +513,7 @@
                   </div>
                   <!-- end step -->
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 col-6">
                   <!-- begin step -->
                   <div class="step">
                     <div class="step__img">
@@ -526,7 +526,7 @@
                   </div>
                   <!-- end step -->
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4 col-6">
                   <!-- begin step -->
                   <div class="step">
                     <div class="step__img">
@@ -572,14 +572,14 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-8">
+              <div class="col-md-8 col-sm-6">
                 <div class="s-order__left">
                   <div class="s-order__title">
                     <div class="title title--h2">Готов вам ответить на все вопросы и подсказать, что делать дальше.</div>
                   </div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-md-4 col-sm-6">
                 <div class="section__title glitch glitch--h2" data-text="Заполняйте заявку">
                   <div class="title title--h2 title-under">Заполняйте заявку и я лично перезвоню вам</div>
                 </div>
@@ -593,7 +593,7 @@
                             <!-- begin input -->
                             <div class="input input--gray">
                               <label>Введите ваше имя <sup>*</sup></label>
-                              <input class="js-input" type="text">
+                              <input class="js-focused-input" type="text">
                             </div>
                             <!-- end input -->
                           </div>
@@ -601,7 +601,7 @@
                             <!-- begin input -->
                             <div class="input input--gray">
                               <label>Введите ваш телефон<sup>*</sup></label>
-                              <input class="js-input" type="">
+                              <input class="js-focused-input" type="">
                             </div>
                             <!-- end input -->
                           </div>
@@ -609,7 +609,7 @@
                             <!-- begin input -->
                             <div class="input input--gray">
                               <label>Введите ваш Email <sup>*</sup></label>
-                              <input class="js-input" type="">
+                              <input class="js-focused-input" type="">
                             </div>
                             <!-- end input -->
                           </div>
@@ -617,7 +617,7 @@
                             <!-- begin textarea -->
                             <div class="textarea textarea--gray">
                               <label>Комментарий (необязательно)</label>
-                              <textarea class="js-textarea"></textarea>
+                              <textarea class="js-textarea js-focused-input"></textarea>
                             </div>
                             <!-- end textarea -->
                           </div>
@@ -655,274 +655,87 @@
             <div class="section__slider">
               <!-- begin slider -->
               <div class="slider__wrap slider--items__wrap">
-                <div class="slider slider--items js-slider" data-slider="items">
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
+                <div class="slider slider--items js-slider js-lightgallery" data-slider="items">
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_03.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_03.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Лайтбокс для автомобильно сервиса «Шина»</span>
                         <span class="project-link__subttl">Июнь 2018</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
+                    </span>
+                  </a>
+                  <!-- end project-link -->
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_05.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_05.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Рекламный щит для реп-исполнителя «Noize MC»</span>
                         <span class="project-link__subttl">Август 2018</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
+                    </span>
+                  </a>
+                  <!-- end project-link -->
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_07.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_07.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Вывеска для кофе-шопа «Expresso Room»</span>
                         <span class="project-link__subttl">Июнь 2018</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
+                    </span>
+                  </a>
+                  <!-- end project-link -->
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_09.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_09.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Вывеска для магазина техники «Цитрус»</span>
                         <span class="project-link__subttl">Август 2019</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
+                    </span>
+                  </a>
+                  <!-- end project-link -->
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_03.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_03.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_03.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Лайтбокс для автомобильно сервиса «Шина»</span>
                         <span class="project-link__subttl">Июнь 2018</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
+                    </span>
+                  </a>
+                  <!-- end project-link -->
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_05.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_05.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_05.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Рекламный щит для реп-исполнителя «Noize MC»</span>
                         <span class="project-link__subttl">Август 2018</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
+                    </span>
+                  </a>
+                  <!-- end project-link -->
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_07.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_07.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_07.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Вывеска для кофе-шопа «Expresso Room»</span>
                         <span class="project-link__subttl">Июнь 2018</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin project-link -->
-                    <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
+                    </span>
+                  </a>
+                  <!-- end project-link -->
+                  <!-- begin project-link -->
+                  <a href="./img/slider/projects/01_09.jpg" class="project-link slide js-lazy" data-exthumbimage="./img/slider/projects/01_09.jpg">
+                    <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/01_09.jpg">
                       <span class="project-link__content">
                         <span class="project-link__title">Вывеска для магазина техники «Цитрус»</span>
                         <span class="project-link__subttl">Август 2019</span>
                       </span>
-                    </a>
-                    <!-- end project-link -->
-                  </div>
-                  <!-- end slide -->
-                </div>
-                <button class="slider__prev prev js-prev"></button>
-                <button class="slider__next next js-next"></button>
-              </div>
-              <!-- end slider -->
-            </div>
-          </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
-        <section class="section overflow-hidden pt-lgl pb-sm">
-          <div class="word">
-            <div class="word__inner">What we do</div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-5 col-lg-6 col-md-6 col-sm-8">
-                <div class="section__title glitch glitch--h2" data-text="Что мы делаем">
-                  <div class="title title--h2 title-under">Что мы делаем</div>
-                </div>
-                <div class="section__subttl">Мы создаем для вас вывески, лайтбоксы, штендеры и другие объекты (конструкции) наружной рекламы, которые уверенно помогут вашему бизнесу громко заявить о себе.</div>
-              </div>
-            </div>
-            <div class="section__items">
-              <!-- begin slider -->
-              <div class="slider__wrap slider--items__wrap">
-                <div class="slider slider--items js-slider" data-slider="items">
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/01.png">
-                      <span class="item__price">От <br> <strong>1000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Вывески</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/02.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Объёмные буквы</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/03.png">
-                      <span class="item__price">От <br> <strong>2000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Лайтбоксы и штендеры</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/04.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Таблички</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/01.png">
-                      <span class="item__price">От <br> <strong>1000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Вывески</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/02.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Объёмные буквы</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/03.png">
-                      <span class="item__price">От <br> <strong>2000</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Лайтбоксы и штендеры</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
-                  <!-- begin slide -->
-                  <div class="slide">
-                    <!-- begin item -->
-                    <a href="#" class="item js-lazy" data-background-image="./img/we-do/04.png">
-                      <span class="item__price">От <br> <strong>300</strong> грн</span>
-                      <span class="item__content">
-                        <span class="item__title">
-                          <span class="title title--h4 title--h-bold title-under title-under--sm">Таблички</span>
-                        </span>
-                        <span class="item__link link-arrow link-arrow--sm">
-                          <span class="link-arrow__title">Узнать об услуге</span>
-                          <span class="link-arrow__arr"></span>
-                        </span>
-                      </span>
-                    </a>
-                    <!-- end item -->
-                  </div>
-                  <!-- end slide -->
+                    </span>
+                  </a>
+                  <!-- end project-link -->
                 </div>
                 <button class="slider__prev prev js-prev"></button>
                 <button class="slider__next next js-next"></button>

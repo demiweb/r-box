@@ -55,20 +55,14 @@
 
 <!-- begin slider -->
 <div class="slider__wrap slider--items__wrap">
-  <div class="slider slider--items js-slider" data-slider="items">
+  <div class="slider slider--items js-slider js-lightgallery" data-slider="items">
     {% for i in slider.slides %}
-      <!-- begin slide -->
-      <div class="slide">
-        <!-- begin project-link -->
-        <a href="#" class="project-link js-lazy" data-background-image="./img/slider/projects/{{ i.img }}">
-          <span class="project-link__content">
-            <span class="project-link__title">{{ i.title | safe  }}</span>
-            <span class="project-link__subttl">{{ i.subttl | safe }}</span>
-          </span>          
-        </a>
-        <!-- end project-link -->
-      </div>
-      <!-- end slide -->
+        {{ mixins.project(
+          img = i.img,
+          title = i.title,
+          subttl = i.subttl,
+          mod = 'slide'
+        ) }}
     {% endfor %}
   </div>
 

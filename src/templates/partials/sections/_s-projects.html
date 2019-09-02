@@ -1,3 +1,56 @@
+{%set
+projects = [
+    {
+      img: '01_03.jpg',
+      title: 'Лайтбокс для автомобильно 
+сервиса «Шина»',
+      subttl: 'Июнь 2018'
+    },
+    {
+      img: '01_05.jpg',
+      title: 'Рекламный щит для реп-исполнителя
+«Noize MC»',
+      subttl: 'Август 2018'
+    },
+    {
+      img: '01_07.jpg',
+      title: 'Вывеска для кофе-шопа
+«Expresso Room»',
+      subttl: 'Июнь 2018'
+    },
+    {
+      img: '01_09.jpg',
+      title: 'Вывеска для магазина 
+техники «Цитрус»',
+      subttl: 'Август 2019'
+    },
+    {
+      img: '01_03.jpg',
+      title: 'Лайтбокс для автомобильно 
+сервиса «Шина»',
+      subttl: 'Июнь 2018'
+    },
+    {
+      img: '01_05.jpg',
+      title: 'Рекламный щит для реп-исполнителя
+«Noize MC»',
+      subttl: 'Август 2018'
+    },
+    {
+      img: '01_07.jpg',
+      title: 'Вывеска для кофе-шопа
+«Expresso Room»',
+      subttl: 'Июнь 2018'
+    },
+    {
+      img: '01_09.jpg',
+      title: 'Вывеска для магазина 
+техники «Цитрус»',
+      subttl: 'Август 2019'
+    }
+  ]
+%}
+
 <!-- begin section -->
 <section class="section s-projects overflow-hidden pt-lgl pb-sml">
   <div class="word">
@@ -5,6 +58,7 @@
   </div>
 
   <div class="container">
+    {% if not sectionProjects.topSimple %}
     <div class="section__top">
       <div class="section__title glitch glitch--h2" data-text="Наши проекты">
         <div class="title title--h2 title-under">Наши проекты</div>
@@ -17,10 +71,31 @@
         </a>
       </div>
     </div>
+    {% else %}
+    <div class="section__title glitch glitch--h2" data-text="Наши проекты">
+      <div class="title title--h2 title-under">Наши проекты</div>
+    </div>
+    {% endif %}
 
+    {% if not sectionProjects.projectsList %}
     <div class="section__slider">
       {% include "partials/_slider-projects.html" %}
     </div>
+    {% else %}
+    <!-- begin projects -->
+    <div class="projects js-lightgallery">
+      {% for i in projects %}
+        {{ mixins.project(
+          img = i.img,
+          title = i.title,
+          subttl = i.subttl
+        ) }}
+      {% endfor %}
+    </div>
+    <!-- end projects -->
+    {% endif %}
+
+    
 
   </div>
 </section>

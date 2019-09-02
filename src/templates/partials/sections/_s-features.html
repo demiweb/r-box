@@ -1,20 +1,38 @@
 <!-- begin section -->
 <section class="section overflow-hidden pt-lgl pb-sm">
+  {% if sectionFeatures.word %}
+  <div class="word">
+    <div class="word__inner">{{ sectionFeatures.word | safe }}</div>
+  </div>
+  {% else %}
   <div class="word">
     <div class="word__inner">we better</div>
   </div>
+  {% endif %}
   
   <div class="container">
     <div class="row">
       <div class="col-md-7 col-sm-8">
+        {% if sectionFeatures.title %}
+        <div class="section__title glitch glitch--h2" data-text="{{ sectionFeatures.glitchText }}">
+          <div class="title title--h2 title-under">{{ sectionFeatures.title | safe }}</div>
+        </div>
+        {% else %}
         <div class="section__title glitch glitch--h2" data-text="Почему">
           <div class="title title--h2 title-under">Почему мы лучше остальных</div>
         </div>
+        {% endif %}
 
+        {% if sectionFeatures.subttl %}
+        <div class="section__subttl">{{ sectionFeatures.subttl | safe }}</div>
+        {% else %}
         <div class="section__subttl">Мы знаем как важно выбрать надежного исполнителя в какой-либо сфере бизнеса. Любые вопросы
 по изготовлению наружной рекламы в Киеве вы можете решить с помощью профессионалов
 из Рекламного центра “К.Вох”. Объединив наш опыт и преимущества, мы уверенно можем
 гарантировать вам высокое качество услуг по самым выгодным ценам</div>
+        {% endif %}
+
+        
 
       </div>
     </div>

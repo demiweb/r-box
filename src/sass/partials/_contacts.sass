@@ -1,56 +1,68 @@
-.contacts
-  +flex(flex-start, normal, row, wrap)
-  &__content
-    width: percentage(240/690)
-    .contact
-      +notlast
-        margin-bottom: 25px
-        +md
-          margin-bottom: 15px
-    +lg
-      width: 50%
-    +md
-      width: 100%
-      margin-bottom: 15px
-  &__social
-    text-align: center
-  &__btn
-    text-align: right
-    margin-top: 25px
-    width: 100%
-    padding-right: 40px
-    +xs
-      padding-right: 0
-  &__btn-in
-    max-width: 330px
-    margin-left: auto
-    +xs
-      max-width: none
-  &__map
-    position: relative
-    padding-top: 40%
-    width: percentage(450/690)
-    +lg
-      width: 50%
-    +md
-      width: 100%
-      padding-top: 50%
-    iframe
-      +coverdiv
+// .contacts
+//   +flex(flex-start, normal, row, wrap)
+//   &__content
+//     width: percentage(240/690)
+//     .contact
+//       +notlast
+//         margin-bottom: 25px
+//         +md
+//           margin-bottom: 15px
+//     +lg
+//       width: 50%
+//     +md
+//       width: 100%
+//       margin-bottom: 15px
+//   &__social
+//     text-align: center
+//   &__btn
+//     text-align: right
+//     margin-top: 25px
+//     width: 100%
+//     padding-right: 40px
+//     +xs
+//       padding-right: 0
+//   &__btn-in
+//     max-width: 330px
+//     margin-left: auto
+//     +xs
+//       max-width: none
+//   &__map
+//     position: relative
+//     padding-top: 40%
+//     width: percentage(450/690)
+//     +lg
+//       width: 50%
+//     +md
+//       width: 100%
+//       padding-top: 50%
+//     iframe
+//       +coverdiv
 
 .contact
+  $this: &
   +os-reg
   color: $black-light
   position: relative
-  padding-left: 30px
+  +notlast
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 5px
   &__icon
-    position: absolute
-    top: 50%
-    left: 0
-    transform: translate(0, -50%)
+    // position: absolute
+    // top: 50%
+    // left: 0
+    // transform: translate(0, -50%)
     .icon
       font-size: 25px
   &__content
-    a
-      text-decoration: underline
+    text-decoration: underline
+
+  &--static
+    +notlast
+      margin-bottom: 10px
+    #{$this}__content
+      text-decoration: none
+
   

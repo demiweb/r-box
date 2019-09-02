@@ -8,8 +8,12 @@ export default function scrollTo() {
     e.preventDefault();
     const $parentSection = $(e.currentTarget).closest('section');
     const $nextSection = $parentSection.next('section');
+    if (!$nextSection.length) return;
+
+    const $header = $('.header');
+    const OFFSET = $header.height();
     $HTMLBODY.animate({
-      scrollTop: $nextSection.offset().top,
+      scrollTop: $nextSection.offset().top - OFFSET,
     }, 800);
   }
 

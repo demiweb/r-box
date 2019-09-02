@@ -1,13 +1,24 @@
 <!-- begin section -->
-<section class="section s-stext pt-lg pb-sml">
+<section class="section overflow-hidden s-stext pt-lg pb-sml">
+  {% if sectionSeo.word %}
+  <div class="word">
+    <div class="word__inner">{{ sectionSeo.word }}</div>
+  </div>
+  {% endif %}
   <div class="container">
+    {% if sectionSeo.title %}
+    <div class="section__title section__title-mb-lg glitch glitch--h2" data-text="{{ sectionSeo.glitchText }}">
+      <div class="title title--h2 title-under">{{ sectionSeo.title }}</div>
+    </div>
+    {% endif %}
+
     {% if sectionSeo.img %}
     <div class="row">
-      <div class="col-8">
+      <div class="col-sm-8">
         {% include "partials/_seo-text.html" %}
       </div>
 
-      <div class="col-4">
+      <div class="col-sm-4">
         <div class="s-stext__img">
           <img class="js-lazy" alt="" data-src="./img/lightbox-sm.jpg"/>
         </div>

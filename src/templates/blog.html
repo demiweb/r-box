@@ -1,0 +1,29 @@
+---
+title: blog
+page: blog
+hero: {
+  mod: 'hero--sm hero--no-cover',
+  bg: 'bg-hero-blog.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Блог', modLink: 'is-active' }
+    ]
+  },
+  title: {
+    title: 'Блог'
+  },
+  form: true,
+  subttlScnd: {
+    title: 'Нам есть, чем с вами поделиться. Читайте с удовольствием :)'
+  },
+  scroll: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+ {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-blog.html" %}
+{% endblock %}

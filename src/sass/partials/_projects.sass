@@ -1,17 +1,34 @@
+.projects
+  @extend .row
+  +xs
+    margin-left: 0
+    margin-right: 0
+  .project-link
+    margin-bottom: 30px
+    width: calc(25% - 30px)
+    margin-left: 15px
+    margin-right: 15px
+    // padding-top: 35%
+    +md
+      width: calc(33.33333% - 30px)
+      // padding-top: 45%
+    +sm
+      width: calc(50% - 30px)
+      // padding-top: 55%
+    +xs
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+    +xss
+      // padding-top: 100%
+
+
 .project-link
   // +flex(flex-end, normal, column)
   display: block
   +cover
   color: $white
-  // height: 480px
   position: relative
-  padding-top: 145%
-  +sm
-    padding-top: 120%
-  +xs
-    padding-top: 80%
-  +xss
-    padding-top: 90%
   &__content
     display: block
     position: absolute
@@ -21,6 +38,22 @@
     padding: 20px
     +sm
       padding: 10px
+  &__inner
+    display: block
+    +cover
+    padding-top: 145%
+    +md
+      padding-top: 45%
+    +sm
+      padding-top: 55%
+    +xss
+      padding-top: 100%
+    +sm
+      padding-top: 120%
+    +xs
+      padding-top: 80%
+    +xss
+      padding-top: 90%
   &__title
     display: block
     +bold

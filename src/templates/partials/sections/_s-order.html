@@ -5,7 +5,7 @@ form = [
     type: 'text',
     mod: 'input--gray',
     placeholder: '',
-    fieldClass: 'js-input',
+    fieldClass: 'js-focused-input',
     label: { first: 'Введите ваше имя <sup>*</sup>' }
   },
   {
@@ -13,7 +13,7 @@ form = [
     type: '',
     mod: 'input--gray',
     placeholder: '',
-    fieldClass: 'js-input',
+    fieldClass: 'js-focused-input',
     label: { first: 'Введите ваш телефон<sup>*</sup>' }
   },
   {
@@ -21,7 +21,7 @@ form = [
     type: '',
     mod: 'input--gray',
     placeholder: '',
-    fieldClass: 'js-input',
+    fieldClass: 'js-focused-input',
     label: { first: 'Введите ваш Email <sup>*</sup>' }
   },
   {
@@ -29,7 +29,7 @@ form = [
     type: '',
     mod: 'textarea--gray',
     placeholder: '',
-    fieldClass: 'js-textarea',
+    fieldClass: 'js-textarea js-focused-input',
     label: { first: 'Комментарий (необязательно)' }
   }
 ]
@@ -65,7 +65,7 @@ form = [
 
   <div class="container">
     <div class="row">
-      <div class="col-8">
+      <div class="col-md-8 col-sm-6">
         <div class="s-order__left">
           <div class="s-order__title">
             <div class="title title--h2">Готов вам ответить на все вопросы
@@ -74,7 +74,7 @@ form = [
         </div>
       </div>
 
-      <div class="col-4">
+      <div class="col-md-4 col-sm-6">
         <div class="section__title glitch glitch--h2" data-text="Заполняйте заявку">
           <div class="title title--h2 title-under">Заполняйте заявку и я лично перезвоню вам</div>
         </div>

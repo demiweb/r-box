@@ -1,0 +1,60 @@
+{%set
+types = [
+  {
+    img: '01.jpg',
+    price: 'От <br><strong>2000</strong> грн',
+    title: 'Щитовые вывески из композита',
+    text: 'Вывески из ПВХ относятся к наиболее бюджетному варианту вывесок, но несмотря на это выглядят они очень гармонично и привлекательно. Сроки изготовления такой вывески занимают 5-7 рабочих дней. '
+  },
+  {
+    img: '02.jpg',
+    price: 'От <br><strong>2000</strong> грн',
+    title: 'Щитовые вывески из ПВХ',
+    text: 'Вывески из ПВХ относятся к наиболее бюджетному варианту вывесок, но несмотря на это выглядят они очень гармонично и привлекательно. Сроки изготовления такой вывески занимают 5-7 рабочих дней. Для эстетического эффекта на такую вывеску можно добавить объёмные элементы из экструдированного пенопласта.'
+  },
+  {
+    img: '03.jpg',
+    price: 'От <br><strong>3000</strong> грн',
+    title: 'Световые вывески',
+    text: 'Вывески из ПВХ относятся к наиболее бюджетному варианту вывесок, но несмотря на это выглядят они очень гармонично и привлекательно. Сроки изготовления такой вывески занимают 5-7 рабочих дней. '
+  },
+  {
+    img: '04.jpg',
+    price: 'От <br><strong>1000</strong> грн',
+    title: 'Деревянные вывески',
+    text: 'Вывески из ПВХ относятся к наиболее бюджетному варианту вывесок, но несмотря на это выглядят они очень гармонично и привлекательно. Сроки изготовления такой вывески занимают 5-7 рабочих дней. '
+  }
+]
+%}
+
+<!-- begin types -->
+<div class="types">
+  <div class="row">
+    {% for i in types %}
+    <div class="col-md-6">
+      <!-- begin type-item -->
+      <div class="type-item js-lazy" data-background-image="./img/types/{{ i.img }}">
+        <div class="type-item__price item-price">{{ i.price | safe }}</div>
+
+        <div class="type-item__content">
+          <div class="type-item__title">
+            <div class="title title--h4 title--h-bold title--white title-under title-under--sm">{{ i.title | safe }}</div>
+          </div>
+
+          <div class="type-item__text">{{ i.text | safe }}</div>
+
+          <div class="type-item__btn">
+            {{ mixins.btn(
+              title = '<span>Заказать</span>',
+              mod = '',
+              href = false
+            ) }}
+          </div>
+        </div>       
+      </div>
+      <!-- end type-item -->
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end types -->

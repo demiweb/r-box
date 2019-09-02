@@ -1,0 +1,16 @@
+{% macro project(img, title, subttl, mod) %}
+<!-- begin project-link -->
+<a
+  href ="./img/slider/projects/{{ img }}"
+  class="project-link{% if mod %} {{ mod }}{% endif %} js-lazy"
+  data-exthumbimage="./img/slider/projects/{{ img }}"
+  >
+  <span class="project-link__inner js-lazy" data-background-image="./img/slider/projects/{{ img }}">
+    <span class="project-link__content">
+      <span class="project-link__title">{{ title | safe  }}</span>
+      <span class="project-link__subttl">{{ subttl | safe }}</span>
+    </span>
+  </span>
+</a>
+<!-- end project-link -->
+{% endmacro %}

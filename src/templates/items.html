@@ -1,0 +1,27 @@
+---
+title: items
+page: items
+hero: {
+  mod: 'hero--sm hero--no-cover',
+  bg: 'bg-hero-items.jpg',
+  breadcrunbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Продукция', modLink: 'is-active' }
+    ]
+  },
+  title: {
+    title: 'Продукция'
+  },
+  nav: true,
+  scroll: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+ {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-items.html" %}
+ {% include "partials/sections/_s-order.html" %}
+{% endblock %}

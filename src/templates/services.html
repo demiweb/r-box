@@ -1,0 +1,69 @@
+---
+title: services
+page: services
+hero: {
+  mod: 'hero--sm hero--no-cover',
+  bg: 'bg-hero-services.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Услуги', modLink: 'is-active' }
+    ]
+  },
+  title: {
+    title: 'Услуги'
+  },
+  subttlScnd: {
+    title: 'Нам есть, чем гордиться. Листайте вниз :)'
+  },
+  scroll: true
+}
+sectionFeatures: {
+  title: 'Гарантийное обслуживание',
+  glitchtext: 'Гарантийное обслуживание',
+  word: 'service',
+  subttl: 'После установки любых объектов наружной рекламы, могут возникать <br> непредвиденные обстоятельства. В этом случае вам понадобятся наши услуги. <br> В каких случаях вам поможет гарантийное обслуживание?'
+}
+features: {
+  cols: 4,
+  list: [
+    {
+      icon: 'hourglass',
+      title: 'Устарел объект',
+      text: 'После определенного срока службы <br>
+каждому объекту наружной рекламы <br>
+необходима реставрация'
+    },
+    {
+      icon: 'hurricane',
+      title: 'Повреждения от погоды',
+      text: 'Часто бывает, что ваш штендер <br>
+или вывеску настигнет сильный ветер <br>
+и они приходят в негодность'
+    },
+    {
+      icon: 'refresh-button',
+      title: 'Ребрендинг бизнеса',
+      text: 'Нужно поменять цвет буквы <br>
+на вывеске из-за изменений <br>
+в стиле вашего бизнеса'
+    },
+    {
+      icon: 'warning-sign',
+      title: 'Технические неисправности',
+      text: 'С каждым объектом может произойти <br>
+тех. проблема, которая нуждается <br>
+в оперативном решении'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+ {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-features.html" %}
+ {% include "partials/sections/_s-call.html" %}
+ {% include "partials/sections/_s-projects.html" %}
+{% endblock %}

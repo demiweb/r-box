@@ -1,24 +1,45 @@
 <!-- begin features -->
 <div class="features">
   <div class="row justify-content-center">
-    {% for i in features.list %}
-    <div class="col-4">
-      <!-- begin feature -->
-      <div class="feature">
-        <div class="feature__icon">
-          {{ mixins.icon(i.icon) }}
-          {{ mixins.icon('trophy') }}
-        </div>
+    
+      {% for i in features.list %}
+        {% if features.cols === 4 %}
+        <div class="col-md-3 col-sm-4 col-6">
+          <!-- begin feature -->
+          <div class="feature">
+            <div class="feature__icon">
+              {{ mixins.icon(i.icon) }}
+              {{ mixins.icon('trophy') }}
+            </div>
 
-        <div class="feature__title">
-          <div class="title title--h5 title--bold">{{ i.title | safe }}</div>
-        </div>
+            <div class="feature__title">
+              <div class="title title--h5 title--bold">{{ i.title | safe }}</div>
+            </div>
 
-        <div class="feature__text">{{ i.text | safe }}</div>
-      </div>
-      <!-- end feature -->
-    </div>
-    {% endfor %}
+            <div class="feature__text">{{ i.text | safe }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% else %}
+        <div class="col-sm-4 col-6">
+          <!-- begin feature -->
+          <div class="feature">
+            <div class="feature__icon">
+              {{ mixins.icon(i.icon) }}
+              {{ mixins.icon('trophy') }}
+            </div>
+
+            <div class="feature__title">
+              <div class="title title--h5 title--bold">{{ i.title | safe }}</div>
+            </div>
+
+            <div class="feature__text">{{ i.text | safe }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endif %}
+      {% endfor %}
+    
   </div>
 </div>
 <!-- end features -->

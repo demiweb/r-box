@@ -1,55 +1,89 @@
 {%set
-  contacts = [
-    {
-      icon: 'smartphone',
-      content: '<p>(093) 55-00-898</p><p>(050) 14-33-805</p>'
-    },
-    {
-      icon: 'mail',
-      content: '<a href="mailto:r.box.reklama@gmail.com">r.box.reklama@gmail.com</a>'
-    },
-    {
-      icon: 'placeholder',
-      content: 'Киев, ул. Дмитриевская, 82'
-    },
-    {
-      icon: 'comment',
-      content: 'Напишите нам:'
-    }
-  ]
+  contacts = {
+    left: [
+      {
+        icon: 'placeholder',
+        content: 'Киев, ул. Дмитриевская, 82'
+      },
+      {
+        icon: 'smartphone',
+        content: '<p><a href="tel:0935500898">(093) 55-00-898</a></p><p><a href="tel:0501433805">(050) 14-33-805</a></p>'
+      },
+      {
+        icon: 'mail',
+        content: '<a href="mailto:r.box.reklama@gmail.com">r.box.reklama@gmail.com</a>'
+      }
+    ],
+    right: [
+      {
+        icon: 'placeholder',
+        content: 'г. Полтава, ул. Ветеринарная 17б'
+      },
+      {
+        icon: 'smartphone',
+        content: '<a href="tel:+380503045123">+38 (050) 30-45-123</a>'
+      },
+      {
+        icon: 'mail',
+        content: '<a href="mailto:profreclama@gmail.com">profreclama@gmail.com</a>'
+      }
+    ]
+  }
 %} 
 
 <!-- begin section -->
-<section class="section s-contacts pb-md pt-lg">
+<section class="section s-contacts overflow-hidden pb-md pt-lgl">
+  <div class="word">
+    <div class="word__inner">contuct us</div>
+  </div>
+
   <div class="container">
-    <div class="row">
-      <div class="col-xl-5 col-sm-6 order-1 order-sm-0">
-        {% include "partials/_seo-text.html" %}
-      </div>
+    <div class="section__title glitch glitch--h2" data-text="Свяжитесь с нами">
+      <div class="title title--h2 title-under">Свяжитесь с нами удобным <br> для вас способом</div>
+    </div>
 
-      <div class="col-sm-6 offset-xl-1 order-0 order-sm-1">
-        <div class="section__title glitch glitch--h2" data-text="Свяжитесь с нами">
-          <div class="title title--h2 title-under">Свяжитесь с нами удобным <br> для вас способом</div>
-        </div>
+    <div class="section__subttl">
+      <p>Мы работаем с 10:00 до 19:00 (Пн-Пт).</p>
+      <p>Звоните, пишите или заезжайте в гости!</p>
+    </div>
 
-        <div class="section__subttl">
-          <p>Мы работаем с 10:00 до 19:00 (Пн-Пт).</p>
-          <p>Звоните, пишите или заезжайте в гости!</p>
-        </div>
+    <!-- begin map -->
+    <div class="map">
+      <div class="map__block">
+        <!-- begin map-block -->
+        <div class="map-block">
+          <div class="map-block__left">
+            <div class="map-block__block">
+              {% for i in contacts.left %}
+              <div class="contact">
+                <div class="contact__icon">{{ mixins.icon(i.icon) }}</div>
 
-        <div class="section__contacts">
-          <!-- begin contacts -->
-          <div class="contacts">
-            <div class="contacts__content">
-              {% for i in contacts %}
-                <div class="contact">
-                  <div class="contact__icon">{{ mixins.icon(i.icon) }}</div>
-
-                  <div class="contact__content">{{ i.content | safe }}</div>
-                </div>
+                <div class="contact__content">{{ i.content | safe }}</div>
+              </div>
               {% endfor %}
+            </div>
+          </div>
 
-              <div class="contacts__social">
+          <div class="map-block__right">
+            <div class="map-block__block">
+              {% for i in contacts.right %}
+               <div class="contact">
+                <div class="contact__icon">{{ mixins.icon(i.icon) }}</div>
+
+                <div class="contact__content">{{ i.content | safe }}</div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="map-block__bottom">
+            <div class="map-block__block">
+              <div class="contact contact--static">
+                <div class="contact__icon">{{ mixins.icon('comment') }}</div>
+
+                <div class="contact__content">Напишите нам:</div>
+              </div>
+              <div class="map-block__social">
                 {{ mixins.list(
                   name = 'social',
                   modifications = { wrap: '', item: '', link: '' },
@@ -62,25 +96,20 @@
                 ) }}
               </div>
             </div>
-
-            <div class="contacts__map">
-              <iframe class="js-lazy" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.1138510972387!2d30.48669926431658!3d50.4554843949553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce62fb6780c9%3A0xc793feaf59f184df!2z0YPQuy4g0JTQvNC40YLRgNC40LXQstGB0LrQsNGPLCA4Miwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1565965058724!5m2!1sru!2sua" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-
-            <div class="contacts__btn">
-              <div class="contacts__btn-in">
-                {{ mixins.btn(
-                  title = '<span>Заказать звонок</span>',
-                  mod = 'btn--full',
-                  href = false
-                ) }}
-              </div>              
-            </div>
           </div>
-          <!-- end contacts -->
+
+          
         </div>
+        <!-- end map-block -->
       </div>
+
+      <div class="map__map">
+        <iframe class="js-lazy" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.1138510972387!2d30.48669926431658!3d50.4554843949553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce62fb6780c9%3A0xc793feaf59f184df!2z0YPQuy4g0JTQvNC40YLRgNC40LXQstGB0LrQsNGPLCA4Miwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1565965058724!5m2!1sru!2sua" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      
     </div>
+    <!-- end map -->
+
   </div>
 </section>
 <!-- end section -->

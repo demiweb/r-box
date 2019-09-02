@@ -9,6 +9,12 @@
     margin-bottom: 25px
     +md
       margin-bottom: 15px
+  &__title-mb-lg
+    margin-bottom: 65px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 30px
   &__top
     +flex(space-between,center)
     margin-bottom: 40px
@@ -62,14 +68,25 @@
   background-position: 100% 100%
   &__img
     text-align: center
+    +xs
+      margin-top: 25px
 
 .s-order
-  margin-top: 10%
+  margin-top: 200px
+  background-position: 30% 50%
+  +md
+    margin-top: 0
+  +xs
+    background-position: 100% 50%
   &__left
     height: 100%
     +flex(center, flex-end, column)
   &__title
-    max-width: 520px
+    // max-width: 520px
+    max-width: percentage(6/12)
+    +xs
+      max-width: none
+      margin-bottom: 25px
 
 
 

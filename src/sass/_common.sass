@@ -291,17 +291,17 @@ body
 
 .cloud
   position: absolute
+  z-index: 2
   left: 20%
   top: -220px
   +image('cloud.png')
   background-repeat: no-repeat
   background-size: contain
-  background-position: 50% 0
-  // padding-left: 130px
-  // padding-top: 34%
-  // width: percentage(5/12)
+  background-position: 50% 0  
   width: 540px
   height: 430px
+  +md
+    display: none
   &__title
     margin-bottom: 15px
     max-width: 270px
@@ -319,3 +319,30 @@ body
     list-style-type: decimal
     margin-left: 1.1em
 
+.meta
+  +flex(flex-start, center)
+  font-size: 13px
+  &__item
+    +flex(flex-start, center)
+    +notlast
+      margin-right: 35px
+      +md
+        margin-right: 25px
+  &__icon
+    margin-right: 5px
+    +flex(center, center)
+  &__title
+    display: block
+
+blockquote
+  padding: 40px 50px
+  background-color: $white-dark
+  border-left: 3px solid  $red
+  +lg
+    padding: 30px 40px
+  +md
+    padding: 30px
+  +sm
+    padding: 20px
+  +xs
+    padding: 15px

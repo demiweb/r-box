@@ -1,0 +1,33 @@
+---
+title: projects
+page: projects
+hero: {
+  mod: 'hero--sm hero--no-cover',
+  bg: 'bg-hero-projects.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Проекты', modLink: 'is-active' }
+    ]
+  },
+  title: {
+    title: 'Проекты'
+  },
+  subttlScnd: {
+    title: 'Нам есть, чем гордиться. Листайте вниз :)'
+  },
+  scroll: true
+}
+sectionProjects: {
+  topSimple: true,
+  projectsList: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+ {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-projects.html" %}
+ {% include "partials/sections/_s-call.html" %}
+{% endblock %}

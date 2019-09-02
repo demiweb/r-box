@@ -1,0 +1,84 @@
+.blog-articles
+  &__btn
+    text-align: center
+
+.blog-article
+  $this: &
+  +flex(flex-start, normal, column)
+  height: calc(100% - 30px)
+  margin-bottom: 30px
+  +sm
+    margin-bottom: 15px
+    height: auto
+  +hover
+    #{$this}__text, #{$this}__title
+      text-decoration: underline
+
+  &__img
+    +cover
+    padding-top: 55%
+    display: block
+  &__content
+    background-color: $white
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.13)
+    padding: 20px 20px 35px
+    flex-grow: 1
+    +flex(flex-start, normal, column)
+    +md
+      padding: 15px
+  &__title
+    margin-bottom: 25px
+    display: block
+    +md
+      margin-bottom: 15px
+  &__text
+    margin-bottom: 20px
+    display: block
+    flex-grow: 1
+    +md
+      margin-bottom: 10px
+  &__meta
+    margin-bottom: 15px
+
+.blog-page
+  +clr
+  h1, h2, h3, p, article, img, ul, ol, figure, blockquote
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  blockquote
+    margin-top: 60px
+    margin-bottom: 60px
+    +lg
+      margin-top: 50px
+      margin-bottom: 50px
+    +md
+      margin-top: 40px
+      margin-bottom: 40px
+    +sm
+      margin-top: 30px
+      margin-bottom: 30px
+    +xs
+      margin-top: 15px
+      margin-bottom: 15px
+
+
+  h2
+    @extend .title
+    @extend .title--h4
+    @extend .title--h-bold
+    @extend .title-under
+    @extend .title-under--sm
+    width: 50%
+    padding-right: 30px
+    +xs
+      width: auto
+      padding-right: 0
+  img
+    float: right
+    width: 50%
+    margin-left: 30px
+    +xs
+      width: 100%
+      float: none
+      margin-left: 0

@@ -1,0 +1,35 @@
+{%set
+  items = [
+    { img: '05.png', price: 'От <br> <strong>1000</strong> грн', title: 'Вывески' },
+    { img: '06.png', price: 'От <br> <strong>300</strong> грн', title: 'Объёмные буквы' },
+    { img: '07.png', price: 'От <br> <strong>2000</strong> грн', title: 'Лайтбоксы' },
+    { img: '08.png', price: 'От <br> <strong>2000</strong> грн', title: 'Штендеры' },
+    { img: '09.png', price: 'От <br> <strong>300</strong> грн', title: 'Таблички' }
+  ]
+%}
+
+<!-- begin section -->
+<section class="section overflow-hidden pt-xlll pb-sm">
+  <div class="word">
+    <div class="word__inner">production</div>
+  </div>
+
+  <div class="container">
+    <!-- begin items -->
+    <div class="items">
+      <div class="row justify-content-center">
+        {% for i in items %}
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          {{ mixins.item(
+            img = i.img,
+            price = i.price,
+            title = i.title
+          ) }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end items -->
+  </div>
+</section>
+<!-- end section -->

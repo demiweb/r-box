@@ -1,3 +1,33 @@
+{%set
+chart = [
+  {
+    title: '76%',
+    text: 'потребителей, по их словам, приняли
+решение зайти в магазин, в котором раньше
+никогда не были, на основании его вывески. '
+  },
+  {
+    title: '60%',
+    text: 'респондентов утверждают, что они
+не войдут в магазин, если вывеска 
+отсутствует полностью
+'
+  },
+  {
+    title: '55%',
+    text: 'респондентов ответили, что не войдут
+в магазин со сломанной, испорченной
+или некачественной вывеской'
+  },
+  {
+    title: '68%',
+    text: 'клиентов считают, что вывеска
+является надежным индикатором
+продуктов и услуг компании.'
+  }
+]
+%}
+
 <!-- begin hero -->
 <section class="hero{% if hero.mod %} {{ hero.mod }}{% endif %}">
   <div class="hero__bg{% if hero.bg %} js-lazy{% endif %}" {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}>
@@ -19,17 +49,111 @@
 
     <div class="hero__content">
       {% if hero.title %}
-      <div class="hero__title">
-        <div class="title title--accent title--lg title--shadow">{{ hero.title.title | safe }}</div>
+        {% if hero.title.medium %}
+        <div class="hero__title">
+            <div class="title title--white">{{ hero.title.title | safe }}</div>
+          </div>
+        {% else %}
+        <div class="hero__title">
+          <div class="title title--accent title--lg title--shadow">{{ hero.title.title | safe }}</div>
+        </div>
+        {% endif %}
+      {% endif %}
+
+      {% if hero.nav %}
+      <div class="hero__nav">
+        {{ mixins.list(
+          name = 'nav',
+          noClass = true,
+          modifications = { wrap: 'nav-hero', item: '', link: '' },
+          list = [
+            { link: 'Вывески' },
+            { link: 'Штендеры' },
+            { link: 'Объемные буквы' },
+            { link: 'Таблички' },
+            { link: 'Лайтбоксы' }
+          ]
+        ) }}
       </div>
       {% endif %}
+
+      
+
       {% if hero.subttl %}
       <div class="hero__subttl">
         <div class="title title--h2 title--white">{{ hero.subttl.title | safe }}</div>
       </div>
       {% endif %}
+
+      {% if hero.form %}
+      <div class="hero__form">
+        <!-- begin form -->
+        <div class="form form--subscribe">
+          <form>
+            <div class="form__inner">
+              <div class="form__title">
+                <div class="title title--h5 title--white">Подпишитесь на наш блог</div>
+              </div>
+              <div class="form__row">
+                <div class="form__field">
+                  <!-- begin input -->
+                  <div class="input">
+                    <input type="email" placeholder="Введите ваш Email">
+                    {{ mixins.btn(
+                      title = '',
+                      mod = 'btn--arr btn--arr-transp',
+                      href = false
+                    ) }}
+                  </div>
+                  <!-- end input -->                         
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- end form -->
+      </div>
+      {% endif %}
+
       {% if hero.subttlScnd %}
       <div class="hero__subttl-scnd">{{ hero.subttlScnd.title | safe }}</div>
+      {% endif %}
+      {% if hero.btns %}
+      <div class="hero__btns">
+        {% for i in hero.btns %}
+        <div class="hero__btn">
+          {{ mixins.btn(
+            title = i.title,
+            mod = i.mod,
+            href = i.href,
+            attributes = i.attrtibutes
+          ) }}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if hero.chart %}
+      <div class="hero__chart" >
+        <!-- begin hero-chart -->
+        <div class="hero-chart" >
+          <div class="hero-chart__chart js-lazy" data-background-image="./img/bg-chart.png">
+            {% for i in chart %}
+            <div class="hero-chart__item">
+              <!-- begin hero-chart-item -->
+              <div class="hero-chart-item">
+                <div class="hero-chart-item__title">{{ i.title | safe }}</div>
+                <div class="hero-chart-item__text">{{ i.text | safe }}</div>
+              </div>
+              <!-- end hero-chart-item -->
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="hero-chart__auth">Ссылка на источник: <a href="#">«International Sign-Makers Association»</a> </div>          
+        </div>
+        <!-- end hero-chart -->
+      </div>
       {% endif %}
     </div>
   </div>

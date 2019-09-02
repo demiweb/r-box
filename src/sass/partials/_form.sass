@@ -41,6 +41,9 @@
     //   +lg
     //     white-space: normal
   &--subscribe
+    max-width: 330px
+    #{$this}__title
+      margin-bottom: 10px
     input
       border-bottom: 1px solid $gray
       width: 100%
@@ -51,6 +54,11 @@
 
 .input, .textarea
   position: relative
+  &.has-focus, &.has-text
+    label
+      &:first-child
+        display: none
+
   label
     &:first-child
       position: absolute

@@ -1,0 +1,30 @@
+---
+title: blog-page
+page: blog-page
+hero: {
+  mod: 'hero--sm hero--no-cover',
+  bg: 'bg-hero-blog-page.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Блог' },
+      { item: '-' },
+      { link: 'Как выбрать вид наружной рекламы', modLink: 'is-active' }
+    ]
+  },
+  title: {
+    medium: true,
+    title: '<span class="glitch" data-text="Как выбрать">Как выбрать вид наружной рекламы, который
+подойдет для вашего бизнеса'
+  },
+  form: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+ {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-blog-page.html" %}
+ {% include "partials/sections/_s-more-articles.html" %}
+{% endblock %}

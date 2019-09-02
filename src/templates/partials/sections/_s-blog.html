@@ -1,0 +1,114 @@
+{%set
+articles = [
+  {
+    meta: [
+      { icon: 'medical-notes-symbol-of-a-list-paper-on-a-clipboard', title: 'Статьи' },
+      { icon: 'eye', title: '115' },
+      { icon: 'calendar', title: '28.07.2019' }
+    ],
+    title: 'Как выбрать вид наружной рекламы, который подойдет 
+для вашего бизнеса'
+  },
+  {
+    meta: [
+      { icon: 'medical-notes-symbol-of-a-list-paper-on-a-clipboard', title: 'События' },
+      { icon: 'eye', title: '91' },
+      { icon: 'calendar', title: '28.07.2019' }
+    ],
+    title: 'В трц «Гулливер» прошла выставка наружной рекламы,
+в которой принимала участие компания «R.Box»'
+  },
+  {
+    meta: [
+      { icon: 'medical-notes-symbol-of-a-list-paper-on-a-clipboard', title: 'Новости' },
+      { icon: 'eye', title: '270' },
+      { icon: 'calendar', title: '28.07.2019' }
+    ],
+    title: 'В индустрии наружной рекламы каждый день появляются
+новые технологии, которые мы применяем в своей работе'
+  },
+  {
+    meta: [
+      { icon: 'medical-notes-symbol-of-a-list-paper-on-a-clipboard', title: 'Статьи' },
+      { icon: 'eye', title: '115' },
+      { icon: 'calendar', title: '28.07.2019' }
+    ],
+    title: 'Как выбрать вид наружной рекламы, который подойдет 
+для вашего бизнеса'
+  },
+  {
+    meta: [
+      { icon: 'medical-notes-symbol-of-a-list-paper-on-a-clipboard', title: 'События' },
+      { icon: 'eye', title: '91' },
+      { icon: 'calendar', title: '28.07.2019' }
+    ],
+    title: 'В трц «Гулливер» прошла выставка наружной рекламы,
+в которой принимала участие компания «R.Box»'
+  },
+  {
+    meta: [
+      { icon: 'medical-notes-symbol-of-a-list-paper-on-a-clipboard', title: 'Новости' },
+      { icon: 'eye', title: '270' },
+      { icon: 'calendar', title: '28.07.2019' }
+    ],
+    title: 'В индустрии наружной рекламы каждый день появляются
+новые технологии, которые мы применяем в своей работе'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-sml pb-sml">
+  <div class="container">
+    <!-- begin blog-articles -->
+    <div class="blog-articles">
+      <div class="row">
+        {% for i in articles %}
+        <div class="col-md-6">
+          <!-- begin blog-article -->
+          <a href="#" class="blog-article">
+            <span class="blog-article__img js-lazy" data-background-image="./img/blog/01.jpg"></span>
+
+            <span class="blog-article__content">
+              <span class="blog-article__meta meta">
+                {% for j in i.meta %}
+                <span class="meta__item">
+                  <span class="meta__icon">{{ mixins.icon(j.icon) }}</span>
+                  <span class="meta__title">{{ j.title | safe }}</span>
+                </span>
+                {% endfor %}
+              </span>
+
+              <span class="blog-article__title">
+                <span class="title title--h-bold title--h4 title-under title-under--sm">{{ i.title | safe }}</span>
+              </span>
+
+              <span class="blog-article__text">Наружная реклама - важная составляющая имиджа любой компании, независимо от вида деятельности. Ее смело можно назвать визиткой организации, а потому данный атрибут необходим любому учреждению, фирме или организации. Даже, если ваш...</span>
+
+              <span class="blog-article__btn">
+                {{ mixins.btn(
+                  title = '<span>Читать статью</span>',
+                  mod = '',
+                  href = false,
+                  isInline = true
+                ) }}
+              </span>
+            </span>
+          </a>
+          <!-- end blog-article -->
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="blog-articles__btn">
+        {{ mixins.btn(
+          title = mixins.icon('refresh') + 'Загрузить еще',
+          mod = 'btn--icon',
+          href = false
+        ) }}
+      </div>
+    </div>
+    <!-- end blog-articles -->
+  </div>
+</section>
+<!-- end section -->

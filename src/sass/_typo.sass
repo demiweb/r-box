@@ -36,7 +36,10 @@ h1, h2, h3, h4, h5, h6
   &--accent
     color: $accent
   &--shadow
-    text-shadow: 0 0 50px currentColor
+    background-color: $accent
+    color: transparent
+    background-clip: text
+    text-shadow: 0 0 50px $accent, 0px 0px 10px rgba($white, .5)
 
 .title-under
   position: relative
@@ -51,12 +54,16 @@ h1, h2, h3, h4, h5, h6
     position: absolute
   &--sm
     +before
-      width: 65px
+      width: 65px !important
       left: 0
       transform: skew(-30deg)
   &--inherit
     +before
       background-color: currentColor
+  &--center
+    +before
+      left: 50%
+      transform: translate(-50%, 0) skew(-70deg)
 
 .text
   &--gray

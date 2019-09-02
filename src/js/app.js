@@ -10,7 +10,8 @@ import toggleMenu from './components/toggleMenu';
 import scrollTo from './components/scrollTo';
 import setSelects from './components/setSelects';
 import setTextareaAutoheight from './components/setTextareaAutoheight';
-// import toggleInputLabels from './components/toggleInputLabels';
+import toggleFormLabels from './components/toggleFormLabels';
+import setGallery from './components/setGallery';
 
 $(() => {
   sayHello();
@@ -24,5 +25,6 @@ $(() => {
   scrollTo();
   setSelects();
   setTextareaAutoheight();
-  // toggleInputLabels();
+  toggleFormLabels();
+  setGallery();
 });

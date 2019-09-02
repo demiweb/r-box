@@ -60,3 +60,21 @@
         transform: translate(-50%, -50%)
     +xs
       width: 32px
+  &--arr-transp
+    background-color: transparent
+    color: $accent
+  &--icon
+    +tr(background-color .3s, color .3s)
+    +before
+      display: none
+    +hover
+      background-color: $accent
+      .icon
+        fill: $white
+    .icon
+      fill: $accent
+      margin-right: 5px
+      font-size: 1.2em
+      position: relative
+      top: .2em
+      +tr(fill .3s)

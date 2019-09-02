@@ -1,0 +1,43 @@
+---
+title: one-item
+page: one-item
+hero: {
+  mod: 'hero--no-cover hero--md',
+  bg: 'bg-hero-one-item.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Продукция' },
+      { item: '-' },
+      { link: 'Вывески', modLink: 'is-active' }
+    ]
+  },
+  title: {
+    title: 'Вывески'
+  },
+  subttlScnd: {
+    title: 'Вывеска - один из самых главных атрибутов наружной рекламы для вашего бизнеса.
+Грамотно спроектированная и правильно изготовленная рекламная вывеска 
+выведет ваш бизнес на новый уровень.'
+  },
+  btns: [
+    { title: '<span>Хочу вывеску</span>' }
+  ],
+  chart: true
+}
+sectionSeo: {
+  title: 'Расскажем вам немного о вывесках',
+  glitchText: 'Расскажем',
+  word: 'signboard'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+ {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-types.html" %}
+ {% include "partials/sections/_s-seo.html" %}
+ {% include "partials/sections/_s-projects.html" %}
+ {% include "partials/sections/_s-call.html" %}
+{% endblock %}

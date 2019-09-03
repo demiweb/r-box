@@ -1,7 +1,7 @@
 // import '@babel/polyfill';
 import $ from 'jquery';
 import sayHello from './lib/sayHello';
-import { setTouch, detectIE } from './components/setHTMLClassNames';
+import setHTMLClassNames from './components/setHTMLClassNames';
 import setLazy from './components/setLazy';
 import setSliders from './components/setSliders';
 import setScrollbar from './components/setScrollbar';
@@ -15,8 +15,7 @@ import setGallery from './components/setGallery';
 
 $(() => {
   sayHello();
-  setTouch();
-  detectIE();
+  setHTMLClassNames();
   setLazy();
   setSliders();
   setScrollbar();

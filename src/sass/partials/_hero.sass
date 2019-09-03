@@ -101,8 +101,14 @@
       padding-top: 0
       padding-bottom: 0
     #{$this}__content
-      padding-top: 10%
-      padding-bottom: 20%
+      html.is-ie &
+        padding-top: 10%
+        padding-bottom: 20%
+      html:not(.is-ie) &
+        padding-top: 25px
+        padding-bottom: 25px
+        min-height: 500px
+        +flex(center, normal, column)
   &--md
     margin-bottom: 0
     +xs

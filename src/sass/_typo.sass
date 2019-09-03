@@ -36,10 +36,14 @@ h1, h2, h3, h4, h5, h6
   &--accent
     color: $accent
   &--shadow
-    background-color: $accent
-    color: transparent
-    background-clip: text
-    text-shadow: 0 0 50px $accent, 0px 0px 10px rgba($white, .5)
+    html:not(.is-ie) &
+      background-color: $accent
+      color: transparent
+      background-clip: text
+      text-shadow: 0 0 50px $accent, 0px 0px 10px rgba($white, .5)
+    html.is-ie &
+      color: $accent
+      text-shadow: 0 0 50px $accent
 
 .title-under
   position: relative

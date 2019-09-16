@@ -2,8 +2,11 @@
   $this: &
   position: relative
   .word
-    left: percentage(3/12)
+    // left: percentage(3/12)
+    right: 10%
     top: 0
+    +xl
+      right: 0
   &__title
     position: relative
     margin-bottom: 25px
@@ -34,6 +37,8 @@
       margin-bottom: 25px
     +sm
       margin-bottom: 15px
+      br
+        display: none
   &__items
     margin-top: 30px
     margin-bottom: 30px
@@ -48,10 +53,12 @@
 
 .s-about
   background-size: 25%
-  background-position: 50% 100%
+  background-position: 40% 100%
   background-repeat: no-repeat
   +md
-    background-size: 40%
+    background-size: 30%
+  +sm
+    background-position: 20% 100%
   +xs
     background-size: 70%
   .word

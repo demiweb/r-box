@@ -30,11 +30,19 @@ body
     animation: fadeIn 1s
 
 .container
+  // +xlmin    
+    // max-width: 1440px
   max-width: 1440px
   padding-left: 15px
   padding-right: 15px
   margin-left: auto
   margin: auto
+  +r(1499)
+    max-width: 1300px
+  +xl
+    max-width: 1140px
+  +lg
+    max-width: 992px
 
 .logo
   $this: &

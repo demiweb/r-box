@@ -14,11 +14,11 @@
 // Utilizes the mixin meant for fixed width containers, but with 100% width for
 // fluid, full width layouts.
 
-@if $enable-grid-classes {
-  .container-fluid {
-    @include make-container();
-  }
-}
+// @if $enable-grid-classes {
+//   .container-fluid {
+//     @include make-container();
+//   }
+// }
 
 // Row
 //

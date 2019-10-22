@@ -1,0 +1,48 @@
+{%set
+chart = [
+  {
+    title: '76%',
+    text: 'потребителей, по их словам, приняли
+решение зайти в магазин, в котором раньше
+никогда не были, на основании его вывески. '
+  },
+  {
+    title: '60%',
+    text: 'респондентов утверждают, что они
+не войдут в магазин, если вывеска 
+отсутствует полностью
+'
+  },
+  {
+    title: '55%',
+    text: 'респондентов ответили, что не войдут
+в магазин со сломанной, испорченной
+или некачественной вывеской'
+  },
+  {
+    title: '68%',
+    text: 'клиентов считают, что вывеска
+является надежным индикатором
+продуктов и услуг компании.'
+  }
+]
+%}
+
+<!-- begin chart -->
+<div class="chart" >
+  <div class="chart__chart js-lazy" data-background-image="./img/bg-chart.png">
+    {% for i in chart %}
+    <div class="chart__item">
+      <!-- begin chart-item -->
+      <div class="chart-item">
+        <div class="chart-item__title">{{ i.title | safe }}</div>
+        <div class="chart-item__text">{{ i.text | safe }}</div>
+      </div>
+      <!-- end chart-item -->
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="chart__auth">Ссылка на источник: <a href="#">«International Sign-Makers Association»</a> </div>          
+</div>
+<!-- end chart -->

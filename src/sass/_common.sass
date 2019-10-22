@@ -45,47 +45,55 @@ body
     max-width: 992px
 
 .logo
-  $this: &
-  display: inline-flex
-  justify-content: flex-start
-  padding-left: 1.15em
-  align-items: center
-  position: relative
-  color: $black-light
-  font-size: 35px
-  +os-reg
-  +lg
-    font-size: 30px
+  display: inline-block
+  font-size: 0
+  width: 75px
   +md
-    font-size: 26px
+    width: 60px
   +xs
-    font-size: 18px
-  &__circle
-    height: 2.1em
-    width: 2.1em
-    border-radius: 50%
-    border: 2px solid $white
-    position: absolute
-    display: block
-    left: 0
-    top: 50%
-    transform: translate(0, -50%)
-    z-index: 0
-  &__title
-    display: block
-  &__subttl
-    display: block
-    font-size: 0.4em
-  &__content
-    background-color: $accent
-    display: block
-    position: relative
-    z-index: 1
-  &--footer
-    #{$this}__content
-      background-color: $white-dark
-    #{$this}__circle
-      border-color: $accent
+    width: 40px
+
+  // $this: &
+  // display: inline-flex
+  // justify-content: flex-start
+  // padding-left: 1.15em
+  // align-items: center
+  // position: relative
+  // color: $black-light
+  // font-size: 35px
+  // +os-reg
+  // +lg
+  //   font-size: 30px
+  // +md
+  //   font-size: 26px
+  // +xs
+  //   font-size: 18px
+  // &__circle
+  //   height: 2.1em
+  //   width: 2.1em
+  //   border-radius: 50%
+  //   border: 2px solid $white
+  //   position: absolute
+  //   display: block
+  //   left: 0
+  //   top: 50%
+  //   transform: translate(0, -50%)
+  //   z-index: 0
+  // &__title
+  //   display: block
+  // &__subttl
+  //   display: block
+  //   font-size: 0.4em
+  // &__content
+  //   background-color: $accent
+  //   display: block
+  //   position: relative
+  //   z-index: 1
+  // &--footer
+  //   #{$this}__content
+  //     background-color: $white-dark
+  //   #{$this}__circle
+  //     border-color: $accent
 
 .scroll-down
   color: $gray

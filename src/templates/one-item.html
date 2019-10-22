@@ -2,7 +2,7 @@
 title: one-item
 page: one-item
 hero: {
-  mod: 'hero--no-cover hero--md',
+  mod: 'hero--no-cover hero--sm',
   bg: 'bg-hero-one-item.jpg',
   breadcrumbs: {
     list: [
@@ -23,8 +23,7 @@ hero: {
   },
   btns: [
     { title: '<span>Хочу вывеску</span>' }
-  ],
-  chart: true
+  ]
 }
 sectionSeo: {
   title: 'Расскажем вам немного о вывесках',
@@ -36,6 +35,7 @@ sectionSeo: {
 
 {% block content %}
  {% include "partials/_hero-page.html" %}
+ {% include "partials/sections/_s-chart.html" %}
  {% include "partials/sections/_s-types.html" %}
  {% include "partials/sections/_s-seo.html" %}
  {% include "partials/sections/_s-projects.html" %}

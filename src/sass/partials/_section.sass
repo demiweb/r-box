@@ -2,11 +2,14 @@
   $this: &
   position: relative
   .word
-    // left: percentage(3/12)
-    right: 10%
+    left: percentage(3/12)
+    // right: 10%
     top: 0
     +xl
-      right: 0
+      left: 15%
+      // right: 0
+    +md
+      left: 5%
   &__title
     position: relative
     margin-bottom: 25px
@@ -50,6 +53,9 @@
     color: $white
   &--bg
     +cover
+  &--word-lower
+    .word
+      top: 7%
 
 .s-about
   background-size: 25%

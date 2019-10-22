@@ -1,32 +1,4 @@
-{%set
-chart = [
-  {
-    title: '76%',
-    text: 'потребителей, по их словам, приняли
-решение зайти в магазин, в котором раньше
-никогда не были, на основании его вывески. '
-  },
-  {
-    title: '60%',
-    text: 'респондентов утверждают, что они
-не войдут в магазин, если вывеска 
-отсутствует полностью
-'
-  },
-  {
-    title: '55%',
-    text: 'респондентов ответили, что не войдут
-в магазин со сломанной, испорченной
-или некачественной вывеской'
-  },
-  {
-    title: '68%',
-    text: 'клиентов считают, что вывеска
-является надежным индикатором
-продуктов и услуг компании.'
-  }
-]
-%}
+
 
 <!-- begin hero -->
 <section class="hero{% if hero.mod %} {{ hero.mod }}{% endif %}">
@@ -92,7 +64,7 @@ chart = [
           <form>
             <div class="form__inner">
               <div class="form__title">
-                <div class="title title--h5 title--white">Подпишитесь на наш блог</div>
+                <div class="title title--h5 title--white">Нам есть, чем с вами поделиться. Читайте с удовольствием :)</div>
               </div>
               <div class="form__row">
                 <div class="form__field">
@@ -101,7 +73,7 @@ chart = [
                     <input type="email" placeholder="Введите ваш Email">
                     {{ mixins.btn(
                       title = '',
-                      mod = 'btn--arr btn--arr-transp',
+                      mod = 'btn--arr',
                       href = false
                     ) }}
                   </div>

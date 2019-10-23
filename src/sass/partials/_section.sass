@@ -2,11 +2,15 @@
   $this: &
   position: relative
   .word
-    left: percentage(3/12)
+    left: 25%
     // right: 10%
     top: 0
+    +r(1700)
+      left: 16%
+    +xll
+      left: 14%
     +xl
-      left: 15%
+      left: 10%
       // right: 0
     +md
       left: 5%
@@ -68,7 +72,7 @@
   +xs
     background-size: 70%
   .word
-    +css-lock(30, 100, 320, 1499, top)
+    // +css-lock(30, 100, 320, 1499, top)
 
 .s-call
   &__left

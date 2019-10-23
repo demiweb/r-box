@@ -1,0 +1,45 @@
+.popup
+  position: fixed
+  z-index: 20
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  overflow: auto
+  padding: 15px
+  background-color: rgba($black, .9)
+  +vertical
+  visibility: hidden
+  opacity: 0
+  +tr(opacity .3s, visibility .3s)
+  &.is-active
+    visibility: visible
+    opacity: 1
+  &__inner
+    display: inline-block
+    vertical-align: middle
+    font-size: $fz
+    background-color: $white
+    width: 100%
+    max-width: 450px
+    position: relative
+    padding: 90px 45px
+    +xl
+      padding: 70px 30px
+    +lg
+      padding: 50px 30px
+    +md
+      padding: 30px 20px
+      padding-top: 50px
+    +sm
+      padding: 30px 15px
+      padding-top: 50px
+    +sm
+      font-size: $fz-sm
+  &__close
+    +icon-close(20, 1, currentColor)
+    position: absolute
+    z-index: 1
+    top: 20px
+    right: 20px
+    

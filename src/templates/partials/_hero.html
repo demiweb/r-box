@@ -35,8 +35,9 @@
           <div class="hero__btn">
             {{ mixins.btn(
               title = '<span>Заказать услугу</span>',
-              mod = '',
-              href = false
+              mod = 'js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'call' } 
             ) }}
           </div>
 

@@ -1,6 +1,6 @@
 .hero
   $this: &
-  +cover
+  +cover  
   position: relative
   color: $white
   z-index: 2
@@ -19,6 +19,9 @@
     bottom: 0
     z-index: 0
     +cover
+    // background-size: auto
+    // background-color: $black
+    // background-position: 100% 50%
     overflow: hidden
     +before
       +coverdiv

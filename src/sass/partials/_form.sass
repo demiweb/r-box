@@ -7,14 +7,15 @@
     margin-right: -15px
     margin-left: -15px
     +flex(flex-start, normal, row, wrap)
-  &__field
-    margin-bottom: 30px
+  &__field    
     position: relative
     width: 100%
     padding-left: 15px
     padding-right: 15px
-    +md
-      margin-bottom: 15px
+    +notlast
+      margin-bottom: 30px
+      +md
+        margin-bottom: 15px
     +xs
       width: 100%
   &__field-50
@@ -22,6 +23,12 @@
   &__field-center
     +flex(center, center)
   &__btn
+  &__title
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
     
   &--call
     // max-width: 330px

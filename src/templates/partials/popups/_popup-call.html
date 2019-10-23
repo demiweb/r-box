@@ -1,0 +1,74 @@
+{%set
+fields = [
+  {
+    name: 'input',
+    type: 'text',
+    mod: 'input--gray',
+    placeholder: '',
+    fieldClass: 'js-focused-input',
+    label: { first: 'Введите ваше имя <sup>*</sup>' }
+  },
+  {
+    name: 'input',
+    type: '',
+    mod: 'input--gray',
+    placeholder: '',
+    fieldClass: 'js-focused-input',
+    label: { first: 'Введите ваш телефон<sup>*</sup>' }
+  },
+  {
+    name: 'textarea',
+    type: '',
+    mod: 'textarea--gray',
+    placeholder: '',
+    fieldClass: 'js-textarea js-focused-input',
+    label: { first: 'Комментарий (необязательно)' }
+  }
+]
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close js-popup-close"></button>
+
+    <div class="popup__form">
+      <!-- begin form -->
+      <div class="form">
+        <form>
+          <div class="form__title">
+            <div class="title title--h2 title-under title-under--center">Оставьте ваши данные
+              и мы перезвоним вам
+            </div>
+          </div>
+          <div class="form__row">        
+
+            {% for i in fields %}
+            <div class="form__field">
+              {{ mixins.input(
+                name = i.name,
+                mod = i.mod,
+                type = i.type,
+                placeholder = i.placeholder,
+                value = '',
+                fieldClass = i.fieldClass,
+                label = i.label
+              ) }}
+            </div>
+            {% endfor %}
+
+            <div class="form__field">
+              {{ mixins.btn(
+                title = '<span>Заказать звонок</span>',
+                mod = 'btn--full',
+                href = false
+              ) }}
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end form -->
+    </div>
+  </div>
+</div>
+<!-- end popup -->

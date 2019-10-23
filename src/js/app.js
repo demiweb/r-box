@@ -12,6 +12,7 @@ import setSelects from './components/setSelects';
 import setTextareaAutoheight from './components/setTextareaAutoheight';
 import toggleFormLabels from './components/toggleFormLabels';
 import setGallery from './components/setGallery';
+import setPopups from './components/setPopups';
 
 $(() => {
   sayHello();
@@ -26,4 +27,5 @@ $(() => {
   setTextareaAutoheight();
   toggleFormLabels();
   setGallery();
+  setPopups();
 });

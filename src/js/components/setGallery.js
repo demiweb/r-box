@@ -4,7 +4,6 @@ import 'lg-fullscreen.js';
 import 'lg-autoplay.js';
 import 'lg-share.js';
 import 'lg-thumbnail.js';
-import 'lg-video.js';
 
 export default function setgallery() {
   const lgs = [].slice.call(document.querySelectorAll('.js-lightgallery'));
